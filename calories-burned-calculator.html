@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calories Burned Calculator | Free Online Tool</title>
+<meta name="description" content="Estimate calories burned during exercise.">
+<link rel="canonical" href="https://thetoolswebsite.com/calories-burned-calculator.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Calories Burned Calculator","description":"Estimate calories burned during exercise.","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh}
+.header{background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);padding:15px 0;position:sticky;top:0;z-index:100}
+.header-content{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{color:white;font-size:1.5em;font-weight:700;text-decoration:none}
+.nav a{color:white;text-decoration:none;margin-left:25px;opacity:0.9}
+.container{max-width:900px;margin:0 auto;padding:40px 20px}
+.tool-box{background:white;border-radius:20px;padding:40px;box-shadow:0 25px 50px rgba(0,0,0,0.15)}
+h1{font-size:2.2em;color:#1e293b;margin-bottom:10px}
+.subtitle{color:#64748b;margin-bottom:30px}
+.input-group{margin-bottom:20px}
+.input-group label{display:block;font-weight:600;margin-bottom:8px;color:#374151}
+.input-group input,.input-group select,.input-group textarea{width:100%;padding:15px;border:2px solid #e5e7eb;border-radius:10px;font-size:16px}
+.btn{width:100%;padding:18px;background:linear-gradient(135deg,#667eea,#764ba2);color:white;border:none;border-radius:10px;font-size:18px;font-weight:600;cursor:pointer;margin:20px 0}
+#result{margin-top:30px}
+.result-card{padding:30px;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:15px;color:white;text-align:center}
+.result-value{font-size:3em;font-weight:700}
+.result-label{opacity:0.9;margin-top:5px}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:15px;margin-top:20px}
+.stat-card{padding:20px;background:#f8fafc;border-radius:12px;text-align:center}
+.stat-value{font-size:1.5em;font-weight:700;color:#1e293b}
+.stat-label{color:#64748b;font-size:0.9em}
+.content-section{margin-top:40px;padding-top:30px;border-top:1px solid #e5e7eb}
+.content-section h2{font-size:1.5em;color:#1e293b;margin-bottom:15px}
+.content-section p{color:#4b5563;line-height:1.8;margin-bottom:15px}
+.content-section ul{margin:15px 0;padding-left:25px}
+.content-section li{color:#4b5563;margin-bottom:8px}
+.related-section{margin-top:40px;padding:30px;background:#f8fafc;border-radius:15px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:15px}
+.related-link{padding:12px;background:white;border-radius:8px;color:#667eea;text-decoration:none;text-align:center;border:1px solid #e5e7eb}
+.related-link:hover{background:#667eea;color:white}
+.ad-slot{background:#f1f5f9;padding:20px;text-align:center;color:#94a3b8;border-radius:8px;margin:20px 0}
+.footer{background:rgba(0,0,0,0.2);color:white;padding:40px 20px;margin-top:60px}
+.footer-content{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px}
+.footer-section h4{margin-bottom:15px}
+.footer-section a{color:rgba(255,255,255,0.8);text-decoration:none;display:block;margin-bottom:8px}
+.footer-bottom{text-align:center;margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.2)}
+@media(max-width:768px){h1{font-size:1.8em}.tool-box{padding:25px}}
+</style>
+</head>
+<body>
+<header class="header"><div class="header-content"><a href="/index.html" class="logo">🛠️ TheToolsWebsite</a><nav class="nav"><a href="/index.html">Home</a><a href="/calculators.html">Calculators</a><a href="/converters.html">Converters</a><a href="/generators.html">Generators</a></nav></div></header>
+<main class="container">
+<div class="ad-slot">Advertisement</div>
+<div class="tool-box">
+<h1>Calories Burned Calculator</h1>
+<p class="subtitle">Estimate calories burned during exercise.</p>
+<div class="input-group"><label>Weight</label><div style="display:grid;grid-template-columns:2fr 1fr;gap:10px"><input type="number" id="weight" value="70"><select id="wunit" style="padding:15px;border:2px solid #e5e7eb;border-radius:10px"><option value="kg">kg</option><option value="lbs">lbs</option></select></div></div><div class="input-group"><label>Activity</label><select id="act" style="width:100%;padding:15px;border:2px solid #e5e7eb;border-radius:10px"><option value="7">Running (6 mph)</option><option value="10">Running (8 mph)</option><option value="3.5">Walking (3 mph)</option><option value="6">Cycling (12-14 mph)</option><option value="8">Swimming</option><option value="5">Weight Training</option></select></div><div class="input-group"><label>Duration (minutes)</label><input type="number" id="mins" value="30"></div>
+<button class="btn" onclick="calculate()">Calculate</button>
+<div id="result"></div>
+</div>
+<div class="ad-slot">Advertisement</div>
+<div class="content-section">
+<h2>About Calories Burned Calculator</h2>
+<p>This free online calories burned calculator helps you quickly and accurately perform calculations. Whether you're a student, professional, or just need a quick answer, our tool provides instant results.</p>
+<h2>How to Use</h2>
+<ul><li>Enter your values in the fields above</li><li>Click Calculate to see results</li><li>Copy or use the results as needed</li></ul>
+<h2>Why Use This Tool?</h2>
+<ul><li>100% Free - No registration required</li><li>Instant Results - Get answers immediately</li><li>Mobile Friendly - Works on any device</li><li>Accurate - Uses precise formulas</li></ul>
+</div>
+<div class="ad-slot">Advertisement</div>
+<div class="related-section">
+<h3>Related Tools</h3>
+<div class="related-grid">
+<a href="/pace-calculator.html" class="related-link">Pace Calculator</a><a href="/bmi-calculator.html" class="related-link">Bmi Calculator</a><a href="/calorie-calculator.html" class="related-link">Calorie Calculator</a>
+</div>
+</div>
+<div class="ad-slot">Advertisement</div>
+</main>
+<footer class="footer"><div class="footer-content"><div class="footer-section"><h4>Popular Tools</h4><a href="/calculator.html">Calculator</a><a href="/bmi-calculator.html">BMI Calculator</a><a href="/percentage-calculator.html">Percentage</a></div><div class="footer-section"><h4>Categories</h4><a href="/calculators.html">Calculators</a><a href="/converters.html">Converters</a><a href="/generators.html">Generators</a></div><div class="footer-section"><h4>Company</h4><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy-policy.html">Privacy</a><a href="/terms-of-service.html">Terms</a></div></div><div class="footer-bottom"><p>© 2026 TheToolsWebsite. All rights reserved.</p></div></footer>
+<div class="ad-slot" style="position:fixed;bottom:0;left:0;right:0;margin:0;border-radius:0;">Mobile Ad</div>
+<script>function calculate(){var w=parseFloat(document.getElementById("weight").value);if(document.getElementById("wunit").value=="lbs")w*=0.453592;var met=parseFloat(document.getElementById("act").value);var mins=parseFloat(document.getElementById("mins").value);var cal=met*w*(mins/60);document.getElementById("result").innerHTML='<div class="result-card"><div class="result-label">Calories Burned</div><div class="result-value">'+Math.round(cal)+'</div></div><div class="stats-grid"><div class="stat-card"><div class="stat-value">'+Math.round(cal/mins)+'</div><div class="stat-label">Per Minute</div></div><div class="stat-card"><div class="stat-value">'+Math.round(cal*2)+'</div><div class="stat-label">Per Hour</div></div></div>'}</script>
+</body>
+</html>

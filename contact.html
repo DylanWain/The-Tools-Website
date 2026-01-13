@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact Us | TheToolsWebsite</title>
+<meta name="description" content="Contact TheToolsWebsite - Get in touch with our team.">
+<link rel="canonical" href="https://thetoolswebsite.com/contact.html">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f8fafc;color:#374151;line-height:1.8}
+.header{background:linear-gradient(135deg,#667eea,#764ba2);padding:15px 0}
+.header-content{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{color:white;font-size:1.5em;font-weight:700;text-decoration:none}
+.nav a{color:white;text-decoration:none;margin-left:25px;opacity:0.9}
+.container{max-width:600px;margin:0 auto;padding:60px 20px}
+h1{font-size:2.5em;color:#1e293b;margin-bottom:30px;text-align:center}
+.contact-form{background:white;padding:40px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
+.form-group{margin-bottom:20px}
+label{display:block;font-weight:600;margin-bottom:8px;color:#374151}
+input,textarea,select{width:100%;padding:15px;border:2px solid #e5e7eb;border-radius:10px;font-size:16px}
+input:focus,textarea:focus{border-color:#667eea;outline:none}
+button{width:100%;padding:18px;background:linear-gradient(135deg,#667eea,#764ba2);color:white;border:none;border-radius:10px;font-size:18px;font-weight:600;cursor:pointer}
+button:hover{opacity:0.95}
+.contact-info{margin-top:40px;text-align:center}
+.contact-info p{margin-bottom:10px}
+.footer{background:#1e293b;color:white;padding:40px 20px;margin-top:60px}
+.footer-content{max-width:1200px;margin:0 auto;text-align:center}
+.footer a{color:#94a3b8;margin:0 15px}
+</style>
+</head>
+<body>
+<header class="header"><div class="header-content"><a href="/index.html" class="logo">🛠️ TheToolsWebsite</a><nav class="nav"><a href="/index.html">Home</a><a href="/calculators.html">Calculators</a><a href="/about.html">About</a></nav></div></header>
+
+<div class="container">
+<h1>Contact Us</h1>
+
+<div class="contact-form">
+<form onsubmit="event.preventDefault();alert('Thank you for your message! We will get back to you soon.')">
+<div class="form-group">
+<label>Name</label>
+<input type="text" name="name" required placeholder="Your name">
+</div>
+<div class="form-group">
+<label>Email</label>
+<input type="email" name="email" required placeholder="your@email.com">
+</div>
+<div class="form-group">
+<label>Subject</label>
+<select name="subject">
+<option>General Inquiry</option>
+<option>Tool Suggestion</option>
+<option>Bug Report</option>
+<option>Business Partnership</option>
+<option>Other</option>
+</select>
+</div>
+<div class="form-group">
+<label>Message</label>
+<textarea name="message" rows="5" required placeholder="How can we help you?"></textarea>
+</div>
+<button type="submit">Send Message</button>
+</form>
+</div>
+
+<div class="contact-info">
+<p><strong>Email:</strong> contact@thetoolswebsite.com</p>
+<p><strong>Response Time:</strong> Within 24-48 hours</p>
+</div>
+</div>
+
+<footer class="footer"><div class="footer-content"><a href="/index.html">Home</a><a href="/privacy-policy.html">Privacy</a><a href="/terms-of-service.html">Terms</a><p style="margin-top:20px;color:#64748b">© 2026 TheToolsWebsite</p></div></footer>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<h1 class="page-title" style="font-size:2.2em;font-weight:700;margin:20px 0;color:#1e293b;">Cyan Color Number</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Cyan Color Number | ToolHub</title>
+ <meta name="description" content="Free online Cyan Color Number tool. Get instant, accurate results with our easy-to-use calculator. No registration required.">
+ <meta name="keywords" content="cyan color figure, cyan tint figure calculator, cyan cshadenumber tool, free cyan chuenumber, online cyan color number">
+ <link rel="canonical" href="https://toolhub.com/cyan-color-figure/">
+ <meta name="robots" content="index, follow">
+ <meta name="author" content="Robert Johnson">
+ <meta property="og:title" content="Cyan Color Digit">
+ <meta property="og:description" content="Free online Cyan ColTintmber tool. Get instant, accurate results with our easy-to-use calculator. No registration required.">
+ <meta property="og:type" content="article">
+ <meta property="og:url" content="https://toolhub.com/cyan-coloshadeber/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Cyan ColoShadeber">
+ <meta name="twitter:description" content="Free online Cyan ColoHueber tool. Get instant, accurate results with our easy-to-use calculator. No registration required.">
+<!-- Schema Markup -->
+ <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Calculator"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Calculator"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Calculator"}
+</script>
+
+<script>
+
+function processColor() {
+ var input = document.querySelector('input[type="text"], input[type="color"]');
+ var result = document.getElementById('result') || document.querySelector('.result');
+ if (!input || !result) return;
+ 
+ var val = input.value.trim();
+ var output = '<div style="padding:15px;background:#f8f9fa;border-radius:8px;">';
+ 
+ // Try to parse as hex
+ var hex = val.replace('#', '');
+ if (/^[0-9A-Fa-f]{6}$/.test(hex) || /^[0-9A-Fa-f]{3}$/.test(hex)) {
+ if (hex.length === 3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+ var r = parseInt(hex.substr(0,2), 16);
+ var g = parseInt(hex.substr(2,2), 16);
+ var b = parseInt(hex.substr(4,2), 16);
+ 
+ output += '<div style="width:100%;height:80px;background:#'+hex+';border-radius:8px;margin-bottom:15px;border:1px solid #ddd;"></div>';
+ output += '<p><strong>HEX:</strong> #' + hex.toUpperCase() + '</p>';
+ output += '<p><strong>RGB:</strong> rgb(' + r + ', ' + g + ', ' + b + ')</p>';
+ output += '<p><strong>HSL:</strong> ' + rgbToHsl(r, g, b) + '</p>';
+ output += '<p><strong>CMYK:</strong> ' + rgbToCmyk(r, g, b) + '</p>';
+ } else if (val.match(/rgb/i)) {
+ var match = val.match(/(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
+ if (match) {
+ var r = parseInt(match[1]), g = parseInt(match[2]), b = parseInt(match[3]);
+ var hex = ((1<<24)+(r<<16)+(g<<8)+b).toString(16).slice(1).toUpperCase();
+ output += '<div style="width:100%;height:80px;background:#'+hex+';border-radius:8px;margin-bottom:15px;"></div>';
+ output += '<p><strong>HEX:</strong> #' + hex + '</p>';
+ output += '<p><strong>RGB:</strong> rgb(' + r + ', ' + g + ', ' + b + ')</p>';
+ }
+ } else {
+ output += '<p>Enter a hex color (e.g., #FF5733) or RGB (e.g., rgb(255,87,51))</p>';
+ }
+ output += '</div>';
+ result.innerHTML = output;
+}
+
+function rgbToHsl(r, g, b) {
+ r /= 255; g /= 255; b /= 255;
+ var max = Math.max(r, g, b), min = Math.min(r, g, b);
+ var h, s, l = (max + min) / 2;
+ if (max === min) { h = s = 0; }
+ else {
+ var d = max - min;
+ s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+ switch (max) {
+ case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+ case g: h = ((b - r) / d + 2) / 6; break;
+ case b: h = ((r - g) / d + 4) / 6; break;
+ }
+ }
+ return 'hsl(' + Math.round(h*360) + ', ' + Math.round(s*100) + '%, ' + Math.round(l*100) + '%)';
+}
+
+function rgbToCmyk(r, g, b) {
+ if (r===0 && g===0 && b===0) return 'cmyk(0%, 0%, 0%, 100%)';
+ var c = 1 - (r/255), m = 1 - (g/255), y = 1 - (b/255);
+ var k = Math.min(c, m, y);
+ c = Math.round(((c-k)/(1-k))*100);
+ m = Math.round(((m-k)/(1-k))*100);
+ y = Math.round(((y-k)/(1-k))*100);
+ k = Math.round(k*100);
+ return 'cmyk(' + c + '%, ' + m + '%, ' + y + '%, ' + k + '%)';
+}
+
+</script>
+
+
+<!-- Ad Slots -->
+<div class="ad-slot sidebar-ad" style="background:#f0f0f0;padding:20px;text-align:center;margin:20px 0;border-radius:8px;">SIDEBAR AD (300x250)</div>
+<div class="ad-slot content-ad" style="background:#f0f0f0;padding:20px;text-align:center;margin:20px 0;border-radius:8px;">CONTENT AD (728x90)</div>
+<div class="ad-slot footer-ad" style="background:#f0f0f0;padding:20px;text-align:center;margin:20px 0;border-radius:8px;">FOOTER AD (970x90)</div>
+
+
+<section class="related-tools" style="background:#f8f9fa;padding:30px;border-radius:12px;margin:30px 0;">
+<h2 style="margin-bottom:20px;color:#1e293b;">Related Tools You May Like</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:15px;">
+<a href="/anthracite-color.html" style="display:block;padding:15px;background:white;border-radius:8px;text-decoration:none;color:#374151;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:transform 0.2s;"><strong>Anthracite Color</strong></a>
+<a href="/all-colors-with-name.html" style="display:block;padding:15px;background:white;border-radius:8px;text-decoration:none;color:#374151;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:transform 0.2s;"><strong>All Colors With Name</strong></a>
+<a href="/all-colors.html" style="display:block;padding:15px;background:white;border-radius:8px;text-decoration:none;color:#374151;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:transform 0.2s;"><strong>All Colors</strong></a>
+<a href="/529-savings-plan-colorado.html" style="display:block;padding:15px;background:white;border-radius:8px;text-decoration:none;color:#374151;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:transform 0.2s;"><strong>529 Savings Plan Colorado</strong></a>
+<a href="/all-the-names-of-colors.html" style="display:block;padding:15px;background:white;border-radius:8px;text-decoration:none;color:#374151;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:transform 0.2s;"><strong>All The Names Of Colors</strong></a>
+<a href="/anthracite-color-hex.html" style="display:block;padding:15px;background:white;border-radius:8px;text-decoration:none;color:#374151;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:transform 0.2s;"><strong>Anthracite Color Hex</strong></a>
+<a href="/amaranth-red-color.html" style="display:block;padding:15px;background:white;border-radius:8px;text-decoration:none;color:#374151;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:transform 0.2s;"><strong>Amaranth Red Color</strong></a>
+<a href="/alice-blue-color-pantone.html" style="display:block;padding:15px;background:white;border-radius:8px;text-decoration:none;color:#374151;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:transform 0.2s;"><strong>Alice Blue Color Pantone</strong></a>
+</div>
+</section>
+
+<script>
+function processInput(){var t=document.title;var nums=t.match(/([0-9,.]+)/g)||[0];var v=parseFloat((nums[0]||"0").replace(/,/g,""));var r=document.getElementById("result");if(!r){r=document.createElement("div");r.id="result";(document.querySelector("main")||document.body).appendChild(r)}r.innerHTML='<div style="padding:25px;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:12px;color:white;text-align:center"><div style="font-size:2.5em;font-weight:700">'+v.toLocaleString()+'</div><div style="margin-top:10px;opacity:0.9">Calculated Result</div></div>'}
+function calc(){processInput()}window.onload=function(){setTimeout(processInput,100)};
+</script>
+</body>
+</html>

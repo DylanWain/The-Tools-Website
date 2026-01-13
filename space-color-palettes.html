@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Space Color Palettes | Free Calculator - Boopydoop</title>
+ <meta name="description" content="space color palettes calculator and converter. Generate beautiful color palettes instantly. Create harmonious color schemes for design, web development, and ...">
+ <meta name="keywords" content="color palette generator, color scheme generator, color picker, palette maker, color combinations, color harmony, brand colors">
+ <meta name="robots" content="index, follow">
+ <link rel="canonical" href="https://toolsempire.com/color-palette-generator">
+
+
+<style>
+ *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;color:#333;background:#f8f9fa}a{color:#2563eb;text-decoration:none}a:hover{text-decoration:underline}header{background:linear-gradient(135deg,#1e3a5f 0%,#2d5a87 100%);padding:12px 20px;position:sticky;top:0;z-index:100}.header-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.logo{color:white;font-size:24px;font-weight:700;text-decoration:none}.logo span{color:#10b981}nav a{color:rgba(255,255,255,0.9);margin-left:25px;font-size:15px}.breadcrumb{background:white;padding:12px 20px;font-size:14px;border-bottom:1px solid #e5e7eb}.breadcrumb-inner{max-width:1200px;margin:0 auto}.breadcrumb a{color:#6b7280}.breadcrumb span{color:#9ca3af;margin:0 8px}.container{max-width:1200px;margin:0 auto;padding:30px 20px;display:grid;grid-template-columns:1fr 300px;gap:40px}@media(max-width:900px){.container{grid-template-columns:1fr}}.tool-box{background:white;border-radius:12px;padding:30px;box-shadow:0 4px 20px rgba(0,0,0,0.08);margin-bottom:30px}h1{color:#1e3a5f;font-size:32px;font-weight:700;margin-bottom:8px}.subtitle{color:#6b7280;font-size:18px;margin-bottom:25px}.palette-display{display:flex;height:200px;border-radius:12px;overflow:hidden;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,0.1)}.color-swatch{flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:15px;cursor:pointer;transition:flex 0.3s;position:relative}.color-swatch:hover{flex:1.5}.color-swatch .color-info{background:rgba(255,255,255,0.95);padding:8px 12px;border-radius:6px;font-size:12px;font-weight:600;opacity:0;transition:opacity 0.3s}.color-swatch:hover .color-info{opacity:1}.lock-btn{position:absolute;top:10px;right:10px;background:rgba(255,255,255,0.9);border:none;padding:5px 8px;border-radius:4px;cursor:pointer;font-size:14px}.lock-btn.locked{background:#fbbf24}.controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}.btn{padding:12px 24px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.2s}.btn-primary{background:#3b82f6;color:white}.btn-primary:hover{background:#2563eb}.btn-secondary{background:#e5e7eb;color:#374151}.btn-secondary:hover{background:#d1d5db}.btn-success{background:#10b981;color:white}.btn-success:hover{background:#059669}.harmony-select{padding:12px 20px;border:2px solid #e5e7eb;border-radius:8px;font-size:15px;background:white;cursor:pointer}.harmony-select:focus{outline:none;border-color:#3b82f6}.color-codes{background:#f8fafc;border-radius:8px;padding:20px;margin-top:20px}.color-codes h4{margin-bottom:15px;color:#1e3a5f}.code-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #e5e7eb}.code-row:last-child{border-bottom:none}.code-value{font-family:monospace;font-size:14px;background:#e5e7eb;padding:4px 10px;border-radius:4px}.copy-btn{background:#3b82f6;color:white;border:none;padding:4px 10px;border-radius:4px;cursor:pointer;font-size:12px}.image-upload{border:2px dashed #d1d5db;border-radius:8px;padding:30px;text-align:center;cursor:pointer;margin-top:15px}.image-upload:hover{border-color:#3b82f6;background:#eff6ff}.content-section{background:white;border-radius:12px;padding:35px;margin-bottom:25px;box-shadow:0 2px 10px rgba(0,0,0,0.04)}h2{color:#1e3a5f;font-size:26px;font-weight:700;margin-bottom:20px;padding-bottom:10px;border-bottom:3px solid #e5e7eb}h3{color:#374151;font-size:20px;font-weight:600;margin:25px 0 12px}h4{color:#4b5563;font-size:17px;font-weight:600;margin:20px 0 10px}p{margin-bottom:15px;color:#4b5563}ul,ol{margin:15px 0;padding-left:25px}li{margin-bottom:8px;color:#4b5563}table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px}th,td{padding:12px 15px;text-align:left;border-bottom:1px solid #e5e7eb}th{background:#f8fafc;font-weight:600;color:#1e3a5f}.info-box{background:#eff6ff;border-left:4px solid #3b82f6;padding:20px;margin:20px 0;border-radius:0 8px 8px 0}.warning-box{background:#fef3c7;border-left:4px solid #f59e0b;padding:20px;margin:20px 0;border-radius:0 8px 8px 0}.faq-item{border-bottom:1px solid #e5e7eb;padding:15px 0}.faq-question{font-weight:600;color:#1e3a5f;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:10px 0}.faq-question::after{content:'+';font-size:24px;color:#3b82f6}.faq-item.open .faq-question::after{content:'−'}.faq-answer{display:none;padding:15px 0;color:#4b5563}.faq-item.open .faq-answer{display:block}.sidebar{position:sticky;top:80px;height:fit-content}.sidebar-box{background:white;border-radius:12px;padding:25px;margin-bottom:20px;box-shadow:0 2px 10px rgba(0,0,0,0.04)}.sidebar-title{font-size:18px;font-weight:700;color:#1e3a5f;margin-bottom:15px;padding-bottom:10px;border-bottom:2px solid #e5e7eb}.related-link{display:block;padding:10px 0;color:#374151;border-bottom:1px solid #f3f4f6}.related-link:hover{color:#3b82f6;text-decoration:none}.image-placeholder{background:linear-gradient(135deg,#f3f4f6,#e5e7eb);border-radius:8px;padding:20px;text-align:center;margin:20px 0}footer{background:#1e3a5f;color:white;padding:40px 20px;margin-top:50px}.footer-inner{max-width:1200px;margin:0 auto;text-align:center}.footer-links a{color:rgba(255,255,255,0.8);margin:0 15px}a[target="_blank"]::after{content:" ↗";font-size:12px}.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin:20px 0}.feature-card{background:#f8fafc;padding:20px;border-radius:8px;text-align:center}.feature-icon{font-size:32px;margin-bottom:10px}.color-wheel{width:200px;height:200px;border-radius:50%;background:conic-gradient(red,yellow,lime,aqua,blue,magenta,red);margin:20px auto}
+ </style>
+<!-- Open Graph / Facebook -->
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://thetoolswebsite.com/other/space-color-palettes.html">
+ <meta property="og:title" content="Space Color Palettes | Free Calculator - Boopydoop">
+ <meta property="og:description" content="space color palettes calculator and converter. Generate beautiful color palettes instantly. Create harmonious color schemes for design, web development, and ...">
+ <meta property="og:site_name" content="Boopydoop Calculator">
+<!-- Twitter Card -->
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:url" content="https://thetoolswebsite.com/other/space-color-palettes.html">
+ <meta name="twitter:title" content="Space Color Palettes | Free Calculator - Boopydoop">
+ <meta name="twitter:description" content="space color palettes calculator and converter. Generate beautiful color palettes instantly. Create harmonious color schemes for design, web development, and ...">
+<!-- Additional SEO -->
+ <meta name="robots" content="index, follow, max-image-preview:large">
+ <meta name="author" content="Boopydoop">
+ <link rel="canonical" href="https://thetoolswebsite.com/other/space-color-palettes.html">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Space Color Palettes | Free Calculator - Boopydoop","description":"Free online calculator tool","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+</head>
+<body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+ <header><div class="header-inner"><a href="/" class="logo">Tools<span>Empire</span></a><nav><a href="/pdf">PDF Tools</a><a href="/image">Image Tools</a><a href="/text">Text Tools</a><a href="/developer">Developer</a></nav></div></header>
+<div class="answer-box calculator-tool" aria-label="Space Color Palettes calculator" role="application" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:25px;border-radius:12px;margin:20px 0;text-align:center;">
+ <div class="answer-main" style="font-size:2rem;font-weight:700;">Space Color Palettes</div>
+ <div class="answer-sub" style="font-size:1.1rem;margin-top:8px;">Quick Calculator Tool</div>
+ <input type="text" id="quick-input" placeholder="Enter value" style="margin-top:15px;padding:10px;border-radius:6px;border:none;width:80%;max-width:300px;" aria-label="Enter value for Space Color Palettes">
+</div>
+<div class="breadcrumb"><div class="breadcrumb-inner"><a href="/">Home</a><span>›</span><a href="/design-tools">Design Tools</a><span>›</span><strong>Color Palette Generator</strong></div></div>
+<div class="container" id="main-content">
+
+<div class="tool-box" style="background:white;border-radius:16px;padding:30px;margin-bottom:25px;box-shadow:0 10px 40px rgba(0,0,0,0.15);">
+ <h2>🔧 Space Color Palettes Calculator</h2>
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:15px;">
+ <div>
+ <label style="display:block;font-weight:600;margin-bottom:8px;">Enter Value</label>
+ <input type="number" id="v1" value="100" style="width:100%;padding:15px;border:2px solid #e5e7eb;border-radius:8px;font-size:18px;" oninput="processColor()" aria-label="Enter value for Space Color Palettes">
+ </div>
+ <div style="display:flex;align-items:end;">
+ <button onclick="processColor()" style="width:100%;padding:15px;background:linear-gradient(135deg,#667eea,#764ba2);color:white;border:none;border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;" aria-label="Calculate">Calculate</button>
+ </div>
+ </div>
+ <div style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:25px;border-radius:12px;text-align:center;">
+ <div id="result" style="font-size:1.8rem;font-weight:700;">--</div>
+ <div id="sub" style="font-size:1rem;opacity:0.95;margin-top:5px;">Enter a value to calculate</div>
+ </div>
+
+<!-- Ad Slot 1: After Tool -->
+</div>
+
+</div>
+<main role="main" data-page="space-color-palettes">
+ <div class="tool-box">
+ <h1>🎨 Free Color Palette Generator</h1>
+ <p class="subtitle">Create beautiful, harmonious color schemes for your designs</p>
+<div class="palette-display" id="paletteDisplay">
+ <div class="color-swatch" style="background:#264653"><button class="lock-btn" onclick="toggleLock(0)" aria-label="🔓">🔓</button><div class="color-info">#264653</div></div>
+ <div class="color-swatch" style="background:#2a9d8f"><button class="lock-btn" onclick="toggleLock(1)" aria-label="🔓">🔓</button><div class="color-info">#2a9d8f</div></div>
+ <div class="color-swatch" style="background:#e9c46a"><button class="lock-btn" onclick="toggleLock(2)" aria-label="🔓">🔓</button><div class="color-info">#e9c46a</div></div>
+ <div class="color-swatch" style="background:#f4a261"><button class="lock-btn" onclick="toggleLock(3)" aria-label="🔓">🔓</button><div class="color-info">#f4a261</div></div>
+ <div class="color-swatch" style="background:#e76f51"><button class="lock-btn" onclick="toggleLock(4)" aria-label="🔓">🔓</button><div class="color-info">#e76f51</div></div>
+ </div>
+<div class="controls">
+ <button class="btn btn-primary" onclick="generatePalette()" aria-label="Generate New Palette">Generate New Palette</button>
+ <select class="harmony-select" id="harmonyType" onchange="generateHarmony()">
+ <option value="random">Random</option>
+ <option value="analogous">Analogous</option>
+ <option value="complementary">Complementary</option>
+ <option value="triadic">Triadic</option>
+ <option value="tetradic">Tetradic</option>
+ <option value="split-complementary">Split Complementary</option>
+ <option value="monochromatic">Monochromatic</option>
+ </select>
+ <button class="btn btn-secondary" onclick="exportPalette()" aria-label="Export PNG">Export PNG</button>
+ <button class="btn btn-success" onclick="copyAllCodes()" aria-label="Copy All">Copy All</button>
+ </div>
+<div class="image-upload" onclick="document.getElementById('imageInput').click()">
+ <p>📷 <strong>Extract from Image</strong></p>
+ <p style="font-size:14px;color:#6b7280;">Drop an image or click to upload</p>
+ <input type="file" id="imageInput" accept="image/*" style="display:none" onchange="extractFromImage(event)" aria-label="Enter value for Space Color Palettes">
+ </div>
+<div class="color-codes" id="colorCodes">
+ <h4>Color Codes</h4>
+</div>
+ </div>
+<div class="content-section-1">
+ <h2>What is a Color Palette? Complete Guide</h2>
+ <div class="image-placeholder"><img src="/images/color/color-palette-examples.png" alt="Examples of different color palettes showing harmonious color combinations" style="max-width:100%;height:auto;border-radius:8px;"><p style="font-size:12px;margin-top:10px;">Color palettes create visual harmony and brand consistency</p></div>
+ <p>A color palette is a carefully curated collection of colors that work harmoniously together. Designers, artists, and brands use color palettes to create visual consistency, evoke specific emotions, and establish recognizable identities. Understanding color theory and palette creation is fundamental to effective visual design.</p>
+<h3>The Importance of Color Palettes</h3>
+ <p>Color palettes serve as the foundation of visual communication. They guide design decisions across websites, apps, marketing materials, and brand assets. A well-chosen palette creates cohesion, while a poorly selected one can create visual discord and confusion. According to research from the <a href="https://www.colormatters.com/color-and-design/basic-color-theory" target="_blank" rel="noopener">Institute for Color Research</a>, people make subconscious judgments about products within 90 seconds, and up to 90% of that assessment is based on color alone.</p>
+<h3>Color Palette Components</h3>
+ <h4>Primary Colors</h4>
+ <p>The dominant colors that appear most frequently in your design. These establish the overall mood and are typically limited to one or two colors for maximum impact.</p>
+<h4>Secondary Colors</h4>
+ <p>Supporting colors that complement the primary palette. These provide variety while maintaining harmony and are used for accents and supporting elements.</p>
+<h4>Accent Colors</h4>
+ <p>Bold colors used sparingly to draw attention to specific elements like calls-to-action, highlights, or interactive components.</p>
+<h4>Neutral Colors</h4>
+ <p>Background colors, text colors, and subtle tones that provide visual breathing room. Neutrals include whites, grays, blacks, and muted earth tones.</p>
+<h3>History of Color Theory</h3>
+ <p>Color theory has evolved over centuries. Isaac Newton's experiments with prisms in the 1660s established the foundation, identifying the visible spectrum. Johann Wolfgang von Goethe's 1810 work "Theory of Colours" explored psychological effects. The modern color wheel, attributed to Johannes Itten at the Bauhaus school, remains the primary tool for understanding color relationships.</p>
+ </div>
+<div class="content-section-2">
+ <h2>Understanding Color Theory</h2>
+ <div class="image-placeholder"><img src="/images/color/color-wheel-theory.png" alt="Color wheel showing primary, secondary, and tertiary colors with harmony relationships" style="max-width:100%;height:auto;border-radius:8px;"><p style="font-size:12px;margin-top:10px;">The color wheel is the foundation of color theory</p></div>
+ <p>Color theory provides the scientific and artistic framework for understanding how colors interact. Mastering these principles enables you to create effective, emotionally resonant color palettes.</p>
+<h3>The Color Wheel</h3>
+ <h4>Primary Colors</h4>
+ <p>Red, yellow, and blue form the foundation of traditional color theory. These colors cannot be created by mixing other colors and serve as the basis for all other hues.</p>
+<h4>Secondary Colors</h4>
+ <p>Orange, green, and purple result from mixing two primary colors. Orange combines red and yellow, green combines yellow and blue, and purple combines blue and red.</p>
+<h4>Tertiary Colors</h4>
+ <p>Six colors created by mixing primary and secondary colors: red-orange, yellow-orange, yellow-green, blue-green, blue-purple, and red-purple. These provide nuanced options for sophisticated palettes.</p>
+<h3>Color Properties</h3>
+ <h4>Hue</h4>
+ <p>The pure color itself—red, blue, green, etc. Hue is what we typically mean when we say "color" and represents the color's position on the spectrum.</p>
+<h4>Saturation</h4>
+ <p>The intensity or purity of a color. Highly saturated colors appear vivid and bold, while desaturated colors appear muted or grayish. Saturation affects a color's energy and attention-grabbing quality.</p>
+<h4>Value (Brightness)</h4>
+ <p>How light or dark a color appears. Adding white creates tints (lighter values), while adding black creates shades (darker values). Value contrast is crucial for readability and visual hierarchy.</p>
+<h4>Temperature</h4>
+ <p>Colors are perceived as warm (reds, oranges, yellows) or cool (blues, greens, purples). Temperature affects emotional response and spatial perception—warm colors advance while cool colors recede.</p>
+<h3>Color Models</h3>
+ <h4>RGB (Red, Green, Blue)</h4>
+ <p>The additive color model used for digital screens. Colors are created by combining red, green, and blue light. Values range from 0-255 for each channel, creating over 16 million possible colors.</p>
+<h4>CMYK (Cyan, Magenta, Yellow, Key/Black)</h4>
+ <p>The subtractive color model used for print. Inks absorb light wavelengths to create colors. CMYK produces different results than RGB, requiring conversion for print projects.</p>
+<h4>HSL (Hue, Saturation, Lightness)</h4>
+ <p>A human-intuitive model that separates color (hue), intensity (saturation), and brightness (lightness). HSL makes it easier to create variations and maintain harmony.</p>
+<h4>HEX Codes</h4>
+ <p>Hexadecimal representation of RGB values used in web development. Six characters (e.g., #FF5733) represent red, green, and blue values in base-16 notation.</p>
+ </div>
+<div class="content-section-3">
+ <h2>Color Harmony Types</h2>
+ <p>Color harmonies are predefined relationships between colors on the color wheel. These mathematical relationships create aesthetically pleasing combinations with predictable emotional effects.</p>
+<h3>Complementary Colors</h3>
+ <h4>Definition and Theory</h4>
+ <p>Complementary colors sit directly opposite each other on the color wheel. This 180-degree relationship creates maximum contrast and visual tension. Examples include red/green, blue/orange, and yellow/purple.</p>
+<h4>When to Use Complementary Palettes</h4>
+ <ul>
+ <li>High-impact designs requiring strong contrast</li>
+ <li>Call-to-action buttons and attention-grabbing elements</li>
+ <li>Sports teams and energetic brands</li>
+ <li>Holiday themes (red/green, orange/blue)</li>
+ </ul>
+<h4>Design Tips</h4>
+ <p>Use complementary colors in unequal proportions to avoid visual competition. One color should dominate while the other serves as an accent. Desaturating one color can reduce harshness.</p>
+<h3>Analogous Colors</h3>
+ <h4>Definition and Theory</h4>
+ <p>Analogous colors sit adjacent on the color wheel, typically spanning 30-60 degrees. These naturally harmonious combinations are found throughout nature and create serene, comfortable designs.</p>
+<h4>When to Use Analogous Palettes</h4>
+ <ul>
+ <li>Nature-inspired designs</li>
+ <li>Calming, cohesive brand identities</li>
+ <li>Backgrounds and gradient effects</li>
+ <li>Professional, trustworthy appearances</li>
+ </ul>
+<h4>Design Tips</h4>
+ <p>Choose one dominant color and use adjacent colors as accents. Vary saturation and value to create hierarchy. Analogous palettes can lack contrast, so consider adding a complementary accent.</p>
+<h3>Triadic Colors</h3>
+ <h4>Definition and Theory</h4>
+ <p>Triadic colors are evenly spaced around the wheel, forming an equilateral triangle (120 degrees apart). This creates vibrant, balanced palettes with strong visual interest.</p>
+<h4>When to Use Triadic Palettes</h4>
+ <ul>
+ <li>Playful, energetic designs</li>
+ <li>Children's products and entertainment</li>
+ <li>Bold brand identities</li>
+ <li>Infographics with multiple categories</li>
+ </ul>
+<h4>Design Tips</h4>
+ <p>Let one color dominate while using the other two as accents. Triadic schemes can be overwhelming at full saturation—consider muting colors for sophistication.</p>
+<h3>Tetradic (Rectangle) Colors</h3>
+ <h4>Definition and Theory</h4>
+ <p>Tetradic schemes use four colors arranged in a rectangle on the color wheel—two complementary pairs. This offers the most variety but requires careful balance.</p>
+<h4>When to Use Tetradic Palettes</h4>
+ <ul>
+ <li>Complex designs with many elements</li>
+ <li>Dashboards and data visualization</li>
+ <li>Diverse product lines</li>
+ <li>Rich, layered compositions</li>
+ </ul>
+<h4>Design Tips</h4>
+ <p>Choose one dominant color and use others sparingly. Balance warm and cool colors. Tetradic schemes are challenging—start with unequal proportions.</p>
+<h3>Split-Complementary Colors</h3>
+ <h4>Definition and Theory</h4>
+ <p>Split-complementary uses a base color plus the two colors adjacent to its complement. This provides contrast similar to complementary schemes but with less tension.</p>
+<h4>When to Use Split-Complementary Palettes</h4>
+ <ul>
+ <li>Beginner-friendly high-contrast designs</li>
+ <li>Balanced but interesting compositions</li>
+ <li>Marketing materials needing visual punch</li>
+ <li>Versatile brand systems</li>
+ </ul>
+<h4>Design Tips</h4>
+ <p>The base color typically dominates. Split-complementary is more forgiving than straight complementary—harder to create visual discord.</p>
+<h3>Monochromatic Colors</h3>
+ <h4>Definition and Theory</h4>
+ <p>Monochromatic palettes use variations of a single hue—different tints, tones, and shades of one color. This creates sophisticated, unified designs with inherent harmony.</p>
+<h4>When to Use Monochromatic Palettes</h4>
+ <ul>
+ <li>Elegant, sophisticated brands</li>
+ <li>Minimalist designs</li>
+ <li>Photography-focused layouts</li>
+ <li>Creating depth without competing colors</li>
+ </ul>
+<h4>Design Tips</h4>
+ <p>Use strong value contrast to maintain visual interest. Monochromatic schemes can feel flat—add texture or consider a single accent color from the complement.</p>
+ </div>
+<div class="content-section-4">
+ <h2>How to Generate Color Palettes</h2>
+ <p>Creating effective color palettes involves both artistic intuition and systematic approaches. Our tool provides multiple generation methods to suit different workflows.</p>
+<h3>Method 1: Random Generation</h3>
+ <h4>How It Works</h4>
+ <p>Click "Generate New Palette" to create a completely random five-color combination. While random, the algorithm applies subtle balancing to avoid extremely discordant results.</p>
+<h4>When to Use Random Generation</h4>
+ <p>Random generation excels at discovering unexpected combinations and breaking creative blocks. Use it for inspiration, experimentation, and exploring color spaces you might not consider otherwise.</p>
+<h4>Refinement Process</h4>
+ <p>Lock colors you like and regenerate to replace others. This iterative process helps build palettes combining discovery with intentionality.</p>
+<h3>Method 2: Harmony Rules</h3>
+ <h4>How It Works</h4>
+ <p>Select a harmony type the dropdown to generate palettes following color theory principles. Choose from complementary, analogous, triadic, tetradic, split-complementary, or monochromatic schemes.</p>
+<h4>When to Use Harmony Rules</h4>
+ <p>Harmony-based generation suits projects requiring predictable, theoretically sound color relationships. Professional designers often start with harmony rules, then adjust individual colors.</p>
+<h4>Customization Options</h4>
+ <p>After generating a harmony-based palette, adjust saturation and brightness of individual colors while maintaining the harmonic relationship.</p>
+<h3>Method 3: Image Extraction</h3>
+ <h4>How It Works</h4>
+ <p>Upload an image to extract its dominant colors. Our algorithm analyzes the image and identifies the most prominent and representative colors.</p>
+<h4>When to Use Image Extraction</h4>
+ <p>Image extraction is perfect for creating palettes inspired by photography, artwork, nature, or existing designs. It ensures your colors match visual references accurately.</p>
+<h4>Best Images for Extraction</h4>
+ <ul>
+ <li>High-quality photographs with distinct colors</li>
+ <li>Artwork and illustrations</li>
+ <li>Nature photography (landscapes, flora, fauna)</li>
+ <li>Existing brand materials for color matching</li>
+ </ul>
+ </div>
+<div class="content-section-5">
+ <h2>Color Palette Use Cases</h2>
+ <div class="image-placeholder"><img src="/images/color/color-palette-applications.png" alt="Color palettes applied to various design projects including websites, logos, and print materials" style="max-width:100%;height:auto;border-radius:8px;"><p style="font-size:12px;margin-top:10px;">Color palettes unify design across all touchpoints</p></div>
+ <p>Color palettes serve diverse applications across digital and physical design. Understanding these contexts helps you create appropriate palettes for your specific needs.</p>
+<h3>Web Design and Development</h3>
+ <h4>Website Color Systems</h4>
+ <p>Websites typically require comprehensive color systems including primary brand colors, secondary colors, semantic colors (success, warning, error), and neutral grays for text and backgrounds.</p>
+<h4>CSS Variables and Design Tokens</h4>
+ <p>Modern web development uses CSS custom properties or design tokens to manage colors systematically. Our export feature provides ready-to-use code snippets for implementation.</p>
+<h4>Accessibility Considerations</h4>
+ <p>Web color palettes must meet WCAG accessibility standards. Ensure sufficient contrast ratios between text and background colors—4.5:1 for normal text, 3:1 for large text.</p>
+<h3>Brand Identity Design</h3>
+ <h4>Primary Brand Colors</h4>
+ <p>Most brands use one to three primary colors that become synonymous with the brand. Think Coca-Cola red, Tiffany blue, or UPS brown. Primary brand colors appear in logos, key messaging, and primary touchpoints.</p>
+<h4>Extended Brand Palettes</h4>
+ <p>Beyond primary colors, brands need extended palettes for diverse applications. These include secondary colors, gradient options, dark and light modes, and print variations.</p>
+<h4>Brand Guidelines</h4>
+ <p>Document your color palette in brand guidelines specifying HEX, RGB, CMYK, and Pantone values. Include usage rules, acceptable combinations, and color-on-color specifications.</p>
+<h3>UI/UX Design</h3>
+ <h4>Interface Color Systems</h4>
+ <p>User interfaces require systematic color approaches. Define colors for interactive elements, disabled states, hover states, focus states, and feedback (success, warning, error).</p>
+<h4>Dark Mode Palettes</h4>
+ <p>Modern apps require both light and dark color schemes. Dark mode isn't simply inverting colors—it requires careful palette adjustment for legibility and eye comfort.</p>
+<h4>Component-Based Color</h4>
+ <p>Design systems assign colors to specific components and states. Buttons, form elements, cards, and navigation each have defined color treatments within the palette.</p>
+<h3>Print and Marketing</h3>
+ <h4>CMYK Conversion</h4>
+ <p>Print projects require CMYK color values. Some RGB colors cannot be accurately reproduced in print—check gamut and adjust palettes for print-specific projects.</p>
+<h4>Spot Colors and Pantone</h4>
+ <p>For consistent brand colors across print materials, specify Pantone spot colors. Pantone matching ensures accurate reproduction regardless of printer or substrate.</p>
+<h4>Paper and Material Considerations</h4>
+ <p>Colors appear differently on various papers and materials. Test palettes on intended substrates and adjust for material characteristics.</p>
+ </div>
+<div class="content-section-6">
+ <h2>Psychology of Color</h2>
+ <p>Colors evoke psychological and emotional responses that influence perception, behavior, and decision-making. Understanding color psychology helps create palettes that communicate effectively.</p>
+<h3>Red</h3>
+ <h4>Psychological Associations</h4>
+ <p>Red stimulates excitement, passion, urgency, and energy. It increases heart rate and creates a sense of immediacy. Red commands attention and triggers action.</p>
+<h4>Design Applications</h4>
+ <p>Use red for sale announcements, urgent calls-to-action, food and restaurant brands, and energy or excitement-focused products. Red can increase appetite and encourage impulse decisions.</p>
+<h4>Cultural Considerations</h4>
+ <p>Red symbolizes luck and prosperity in Chinese culture but danger or warning in Western contexts. Consider your audience's cultural background when using red prominently.</p>
+<h3>Blue</h3>
+ <h4>Psychological Associations</h4>
+ <p>Blue conveys trust, stability, professionalism, and calm. It's the world's most popular color and creates feelings of security and reliability.</p>
+<h4>Design Applications</h4>
+ <p>Blue dominates corporate branding, technology companies, healthcare, and financial services. Facebook, LinkedIn, IBM, and countless banks use blue to project trustworthiness.</p>
+<h4>Variations and Meanings</h4>
+ <p>Light blues feel friendly and open. Dark blues suggest authority and formality. Navy conveys tradition while electric blue feels modern and innovative.</p>
+<h3>Green</h3>
+ <h4>Psychological Associations</h4>
+ <p>Green represents nature, growth, health, and tranquility. It's the easiest color for eyes to process and creates balanced, calming effects.</p>
+<h4>Design Applications</h4>
+ <p>Green suits environmental organizations, health and wellness brands, organic products, and financial services (money, growth). Darker greens convey wealth and prestige.</p>
+<h4>Context Matters</h4>
+ <p>Green can also mean "go" in navigation or safety contexts. In medical settings, green indicates sterility. Consider context when choosing green shades.</p>
+<h3>Yellow</h3>
+ <h4>Psychological Associations</h4>
+ <p>Yellow radiates optimism, happiness, warmth, and energy. It's highly visible and attention-grabbing, creating feelings of cheerfulness and positivity.</p>
+<h4>Design Applications</h4>
+ <p>Yellow works for youthful brands, food products, caution/warning elements, and attention-grabbing accents. It's difficult as a dominant color due to eye strain.</p>
+<h4>Usage Cautions</h4>
+ <p>Large areas of bright yellow can cause visual fatigue. Muted yellows (gold, mustard) are more versatile. Yellow text on white is nearly illegible—reserve for backgrounds or accents.</p>
+<h3>Orange</h3>
+ <h4>Psychological Associations</h4>
+ <p>Orange combines red's energy with yellow's friendliness. It creates warmth, enthusiasm, creativity, and impulse. Orange is less aggressive than red but still energizing.</p>
+<h4>Design Applications</h4>
+ <p>Orange suits creative industries, children's products, call-to-action buttons, and entertainment brands. It stimulates appetite (food marketing) and encourages action.</p>
+<h4>Modern Usage</h4>
+ <p>Tech companies increasingly use orange to stand out blue-dominated competitors. Amazon, Firefox, and SoundCloud leverage orange's distinctive, approachable qualities.</p>
+<h3>Purple</h3>
+ <h4>Psychological Associations</h4>
+ <p>Purple evokes luxury, creativity, royalty, and mystery. Historically rare and expensive, purple maintains associations with premium quality and sophistication.</p>
+<h4>Design Applications</h4>
+ <p>Purple suits beauty and cosmetics, luxury brands, creative services, and products targeting women. Lighter purples (lavender) feel romantic; deeper purples feel regal.</p>
+<h4>Cultural Significance</h4>
+ <p>Purple is associated with royalty in many cultures due to the historical expense of purple dye. It's also linked to spirituality and imagination across various traditions.</p>
+<h3>Black and White</h3>
+ <h4>Black Associations</h4>
+ <p>Black represents sophistication, luxury, power, and elegance. It creates strong contrast and works as both a primary color and a neutral.</p>
+<h4>White Associations</h4>
+ <p>White conveys purity, cleanliness, simplicity, and minimalism. It provides visual breathing room and makes other colors appear more vibrant.</p>
+<h4>Design Applications</h4>
+ <p>Black and white together create timeless, sophisticated designs. Luxury brands, fashion, and minimalist products use black-white-accent schemes effectively.</p>
+ </div>
+<div class="content-section-7">
+ <h2>Creating Palettes for Different Industries</h2>
+ <p>Different industries have established color conventions and audience expectations. Understanding these norms helps create appropriate, effective palettes.</p>
+<h3>Technology and Software</h3>
+ <h4>Common Color Patterns</h4>
+ <p>Tech companies favor blues (trust, reliability), gradients (innovation), and clean neutrals (professionalism). Purple and orange increasingly differentiate from blue-saturated competitors.</p>
+<h4>Palette Recommendations</h4>
+ <p>Primary blue or purple, clean white/light gray backgrounds, single vibrant accent for CTAs. Dark mode compatibility is essential for software products.</p>
+<h3>Healthcare and Medical</h3>
+ <h4>Common Color Patterns</h4>
+ <p>Healthcare traditionally uses blues and greens for trust and calm. White conveys cleanliness. Warm accents add humanity to clinical settings.</p>
+<h4>Palette Recommendations</h4>
+ <p>Calm blues or teals as primary, plenty of white space, warm accent colors for approachability. Avoid harsh reds except for emergency/urgent contexts.</p>
+<h3>Food and Restaurant</h3>
+ <h4>Common Color Patterns</h4>
+ <p>Red and orange stimulate appetite. Yellow creates warmth and happiness. Green suggests freshness and health. Brown conveys earthiness and coffee/chocolate associations.</p>
+<h4>Palette Recommendations</h4>
+ <p>Warm colors for traditional restaurants, greens for healthy/organic concepts, earth tones for artisanal brands. Avoid blues which suppress appetite (unless seafood).</p>
+<h3>Finance and Banking</h3>
+ <h4>Common Color Patterns</h4>
+ <p>Blues dominate for trust and stability. Greens suggest growth and money. Gold/navy combinations convey premium service. Conservative palettes signal reliability.</p>
+<h4>Palette Recommendations</h4>
+ <p>Navy or royal blue primary, conservative secondary colors, gold or green accents. Fintech startups increasingly use bolder colors to differentiate traditional banks.</p>
+<h3>Fashion and Beauty</h3>
+ <h4>Common Color Patterns</h4>
+ <p>Black and white for luxury and elegance. Pink and purple target feminine audiences. Bold colors for youth markets. Pastels for softness and approachability.</p>
+<h4>Palette Recommendations</h4>
+ <p>Let product photography dominate with neutral backgrounds. Accent colors should complement rather than compete with merchandise. Seasonal palette variations are common.</p>
+<h3>Education</h3>
+ <h4>Common Color Patterns</h4>
+ <p>Blues for trust and intelligence. Greens for growth. Yellows and oranges for energy and creativity. Bright, approachable colors for younger audiences.</p>
+<h4>Palette Recommendations</h4>
+ <p>Primary blue or green, warm accents for engagement, sufficient contrast for readability. Age-appropriate palette brightness—brighter for children, more muted for adult learning.</p>
+<h3>Environmental and Sustainability</h3>
+ <h4>Common Color Patterns</h4>
+ <p>Greens are obvious but expected. Earth tones (browns, tans) suggest natural materials. Blues represent water and sky. Avoid artificial-looking neons.</p>
+<h4>Palette Recommendations</h4>
+ <p>Nature-inspired palettes with organic variation. Desaturated, earthy tones feel authentic. Consider brown paper and recycled aesthetics for packaging.</p>
+ </div>
+<div class="content-section-8">
+ <h2>Color Palette Best Practices</h2>
+ <p>Follow these principles to create effective, professional color palettes for any project.</p>
+<h3>Start with Strategy</h3>
+ <h4>Define Your Goals</h4>
+ <p>Before selecting colors, clarify your objectives. What emotions should the palette evoke? What actions should it encourage? What audience are you targeting? Strategy should drive color selection.</p>
+<h4>Research Competitors</h4>
+ <p>Analyze competitor color usage. You might align with industry norms for familiarity or differentiate for distinction. Understand the landscape before making choices.</p>
+<h4>Consider Context</h4>
+ <p>Where will these colors appear? Digital, print, or both? Indoor or outdoor viewing? Small screens or large displays? Context affects color perception and selection.</p>
+<h3>Limit Your Palette</h3>
+ <h4>The 60-30-10 Rule</h4>
+ <p>A classic interior design principle that applies to all color work: 60% dominant color, 30% secondary color, 10% accent color. This ratio creates visual balance and hierarchy.</p>
+<h4>Five Colors Maximum</h4>
+ <p>Most effective palettes use three to five colors. More colors create complexity that's difficult to manage consistently. Expand with tints and shades rather than additional hues.</p>
+<h4>Establish Hierarchy</h4>
+ <p>Not all palette colors are equal. Define which color dominates, which supports, and which accents. Clear hierarchy creates intentional, professional designs.</p>
+<h3>Ensure Accessibility</h3>
+ <h4>Contrast Requirements</h4>
+ <p>WCAG accessibility guidelines require 4.5:1 contrast ratio for normal text and 3:1 for large text. Test all text/background combinations with contrast checkers.</p>
+<h4>Color Blindness Considerations</h4>
+ <p>Approximately 8% of men and 0.5% of women have color vision deficiency. Don't rely solely on color to convey information. Test palettes with color blindness simulators.</p>
+<h4>Beyond Color</h4>
+ <p>Use additional visual cues (icons, patterns, labels) alongside color coding. This ensures information remains accessible regardless of color perception.</p>
+<h3>Test in Context</h3>
+ <h4>Real-World Application</h4>
+ <p>Colors look different in different contexts. Test your palette in actual layouts, not just swatches. Monitor calibration, lighting, and materials affect perception.</p>
+<h4>Device Testing</h4>
+ <p>Test digital palettes across multiple devices and screens. Color rendering varies significantly between monitors, phones, and tablets.</p>
+<h4>Print Proofing</h4>
+ <p>For print projects, always request physical proofs before final production. Screen colors rarely match print exactly—proofing prevents costly surprises.</p>
+ </div>
+<div class="content-section-9">
+ <h2>Color Formats and Codes</h2>
+ <p>Understanding different color formats ensures accurate communication and implementation across platforms and applications.</p>
+<h3>HEX Codes</h3>
+ <h4>Format Explanation</h4>
+ <p>Hexadecimal codes represent RGB values using base-16 notation. The format #RRGGBB uses two characters each for red, green, and blue (00-FF, or 0-255 in decimal).</p>
+<h4>Usage</h4>
+ <p>HEX codes are standard in web development (CSS, HTML) and design software. They're compact and widely supported. Shorthand (#RGB) works for colors with repeated digits.</p>
+<h4>Examples</h4>
+ <p>#000000 is black (no light), #FFFFFF is white (full light), #FF0000 is pure red, #00FF00 is pure green, #0000FF is pure blue.</p>
+<h3>RGB Values</h3>
+ <h4>Format Explanation</h4>
+ <p>RGB specifies colors using decimal values (0-255) for red, green, and blue channels. CSS format: rgb(255, 128, 0) or rgba(255, 128, 0, 0.5) with alpha transparency.</p>
+<h4>Usage</h4>
+ <p>RGB is native to digital displays and intuitive for adjusting individual channels. RGBA adds transparency control for overlays and glass effects.</p>
+<h4>Calculation</h4>
+ <p>Convert HEX to RGB by separating pairs and converting from base-16: #FF8000 becomes rgb(255, 128, 0).</p>
+<h3>HSL Values</h3>
+ <h4>Format Explanation</h4>
+ <p>HSL separates hue (0-360 degrees), saturation (0-100%), and lightness (0-100%). CSS format: hsl(30, 100%, 50%) or hsla with alpha.</p>
+<h4>Usage</h4>
+ <p>HSL is intuitive for creating color variations. Adjust lightness for tints/shades, saturation for vibrancy. Keeping hue constant ensures color family consistency.</p>
+<h4>Advantages</h4>
+ <p>HSL makes systematic palette creation easier. Generate harmonies by rotating hue. Create variants by adjusting only saturation or lightness.</p>
+<h3>CMYK Values</h3>
+ <h4>Format Explanation</h4>
+ <p>CMYK specifies cyan, magenta, yellow, and black percentages (0-100% each). Print-specific format representing ink coverage.</p>
+<h4>Usage</h4>
+ <p>CMYK is required for print production. Always convert RGB palettes to CMYK for print projects. Some RGB colors have no CMYK equivalent (gamut limitations).</p>
+<h4>Conversion Challenges</h4>
+ <p>RGB-to-CMYK conversion isn't straightforward. Vivid RGB colors often appear duller in CMYK. Professional print work requires careful color management.</p>
+<h3>Pantone Colors</h3>
+ <h4>What is Pantone</h4>
+ <p>Pantone is a standardized color matching system using numbered swatches. It ensures consistent color reproduction across different printers and materials.</p>
+<h4>Usage</h4>
+ <p>Specify Pantone colors for brand guidelines, merchandise, and any application requiring exact color matching. Pantone bridges digital design and physical production.</p>
+<h4>Cost Considerations</h4>
+ <p>Pantone spot colors add printing cost compared to CMYK process. Reserve Pantone specification for critical brand colors requiring absolute consistency.</p>
+ </div>
+<div class="content-section-10">
+ <h2>Extracting Colors Images</h2>
+ <p>Image-based color extraction creates palettes inspired by photography, artwork, and existing designs. This technique ensures colors work together naturally.</p>
+<h3>How Image Extraction Works</h3>
+ <h4>Color Quantization</h4>
+ <p>Extraction algorithms analyze image pixels and group similar colors together. Dominant colors are identified based on frequency and visual prominence.</p>
+<h4>Clustering Algorithms</h4>
+ <p>K-means clustering and similar algorithms group pixels into a specified number of color clusters. Cluster centers become the extracted palette colors.</p>
+<h4>Perceptual Weighting</h4>
+ <p>Advanced extraction considers human color perception. Colors in focal areas may be weighted more heavily than peripheral or background colors.</p>
+<h3>Best Practices for Image Extraction</h3>
+ <h4>Choose Quality Images</h4>
+ <p>High-resolution images with distinct, well-defined colors produce better results. Avoid heavily compressed images with color artifacts.</p>
+<h4>Consider Composition</h4>
+ <p>The image's subject matter affects extraction. A sunset photo will yield warm colors; a forest scene will produce greens. Choose images that represent your desired palette direction.</p>
+<h4>Post-Extraction Refinement</h4>
+ <p>Extracted colors often need adjustment. Fine-tune saturation, align to brand requirements, and ensure accessibility compliance after extraction.</p>
+<h3>Image Extraction Use Cases</h3>
+ <h4>Nature-Inspired Palettes</h4>
+ <p>Landscape and nature photography produces inherently harmonious palettes. Nature's color combinations have evolved to appeal to human perception.</p>
+<h4>Artwork and Design Inspiration</h4>
+ <p>Extract from admired artwork, vintage posters, or design references. This captures the essence of existing successful color work.</p>
+<h4>Brand Color Matching</h4>
+ <p>Extract existing brand materials to identify and standardize colors. Useful when formalizing previously undocumented brand colors.</p>
+ </div>
+<div class="content-section-11">
+ <h2>Color Palette Tools Comparison</h2>
+ <p>How our color palette generator compares to other popular tools in the market.</p>
+<h3>Feature Comparison</h3>
+ <table>
+ <tr><th>Feature</th><th>Our Tool</th><th>Coolors</th><th>Adobe Color</th><th>Canva</th></tr>
+ <tr><td>Free Usage</td><td>✓ Unlimited</td><td>Limited</td><td>✓ Free</td><td>Limited</td></tr>
+ <tr><td>No Signup Required</td><td>✓</td><td>✗</td><td>✗</td><td>✗</td></tr>
+ <tr><td>Random Generation</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+ <tr><td>Harmony Rules</td><td>✓ All types</td><td>✓</td><td>✓</td><td>Limited</td></tr>
+ <tr><td>Image Extraction</td><td>✓</td><td>✓ Paid</td><td>✓</td><td>✓</td></tr>
+ <tr><td>Color Locking</td><td>✓</td><td>✓</td><td>✗</td><td>✗</td></tr>
+ <tr><td>Export Options</td><td>PNG, CSS, JSON</td><td>Multiple</td><td>Multiple</td><td>Limited</td></tr>
+ <tr><td>Accessibility Check</td><td>Coming Soon</td><td>✓ Paid</td><td>✓</td><td>✗</td></tr>
+ </table>
+<h3>When to Use Each Tool</h3>
+ <h4>Our Tool</h4>
+ <p>Best for quick palette generation without signup, basic harmony exploration, and image extraction. Ideal for designers wanting instant access.</p>
+<h4>Coolors</h4>
+ <p>Excellent for serious color work with advanced features. Worth the subscription for professional designers working with color regularly.</p>
+<h4>Adobe Color</h4>
+ <p>Best integrated with Adobe Creative Cloud workflows. Palettes sync across Photoshop, Illustrator, and other Adobe apps.</p>
+ </div>
+<div class="content-section-12">
+ <h2>Building Color Systems</h2>
+ <p>Modern design requires comprehensive color systems beyond simple palettes. Learn to create systematic approaches for complex projects.</p>
+<h3>Design System Color Architecture</h3>
+ <h4>Primitive Colors</h4>
+ <p>The raw color values in your system—specific HEX codes without semantic meaning. Primitives include all brand colors, grays, and utility colors.</p>
+<h4>Semantic Colors</h4>
+ <p>Colors assigned meaning: primary, secondary, success, warning, error, info. Semantic tokens reference primitives, enabling systematic updates.</p>
+<h4>Component Colors</h4>
+ <p>Colors specific to interface components: button backgrounds, input borders, card shadows. These reference semantic tokens for consistency.</p>
+<h3>Creating Color Scales</h3>
+ <h4>Lightness Scales</h4>
+ <p>For each brand color, generate a scale from light to dark (typically 50-900 or 100-900). These provide options for backgrounds, text, borders, and states.</p>
+<h4>Consistent Increments</h4>
+ <p>Maintain consistent lightness steps across scales. If blue-500 is 50% lightness, red-500 should also be 50% lightness for visual consistency.</p>
+<h4>Gray Scales</h4>
+ <p>Neutral grays are crucial for text, backgrounds, and dividers. Create an extensive gray scale (often 10+ steps) for maximum flexibility.</p>
+<h3>Dark Mode Considerations</h3>
+ <h4>Inverting vs Remapping</h4>
+ <p>Dark mode isn't simply inverting colors. Background colors darken while text lightens, but brand colors typically remain constant or shift subtly.</p>
+<h4>Elevation and Depth</h4>
+ <p>In dark mode, elevated surfaces become lighter (opposite of light mode shadows). Use subtle white overlays rather than shadows for elevation.</p>
+<h4>Reduced Saturation</h4>
+ <p>Bright, saturated colors can appear harsh on dark backgrounds. Consider desaturating colors slightly for dark mode variants.</p>
+ </div>
+<div class="content-section-13">
+ <h2>Color in User Interface Design</h2>
+ <p>Interface design has specific color requirements for usability, accessibility, and user experience.</p>
+<h3>Interactive Element Colors</h3>
+ <h4>Button Colors</h4>
+ <p>Primary actions use brand/accent colors. Secondary actions use muted alternatives. Destructive actions (delete, cancel) use red variants.</p>
+<h4>State Colors</h4>
+ <p>Define colors for default, hover, active, focus, and disabled states. Each state should be visually distinct while maintaining color family relationships.</p>
+<h4>Link Colors</h4>
+ <p>Links should be distinguishable body text. Blue remains the conventional link color, though brand colors can work with underlines or other indicators.</p>
+<h3>Feedback and Status Colors</h3>
+ <h4>Success (Green)</h4>
+ <p>Confirmation messages, completed actions, and positive status indicators. Green universally signals "good" or "go."</p>
+<h4>Warning (Yellow/Amber)</h4>
+ <p>Cautionary messages requiring attention but not critical errors. Yellow/amber suggests "proceed with care."</p>
+<h4>Error (Red)</h4>
+ <p>Error messages, validation failures, and critical alerts. Red demands immediate attention and signals problems.</p>
+<h4>Information (Blue)</h4>
+ <p>Neutral informational messages, tips, and guidance. Blue provides information without positive or negative connotation.</p>
+<h3>Background and Surface Colors</h3>
+ <h4>Base Backgrounds</h4>
+ <p>Primary application backgrounds—typically white or light gray for light mode, dark gray for dark mode. These should recede and let content dominate.</p>
+<h4>Elevated Surfaces</h4>
+ <p>Cards, modals, and dropdowns sit above base backgrounds. Slight color difference and/or shadow creates visual hierarchy.</p>
+<h4>Dividers and Borders</h4>
+ <p>Subtle lines separating content sections. These should be visible enough to serve their purpose but not compete with content.</p>
+ </div>
+<div class="content-section-14">
+ <h2>Color Trends and Inspiration</h2>
+ <p>Color trends evolve with culture, technology, and design movements. Understanding trends helps create contemporary, relevant palettes.</p>
+<h3>Current Color Trends</h3>
+ <h4>Digital Gradients</h4>
+ <p>Multi-color gradients continue dominating digital design. Instagram's gradient rebrand influenced countless apps and websites toward colorful, flowing transitions.</p>
+<h4>Muted and Desaturated</h4>
+ <p>Softer, more sophisticated palettes replace the harsh brights of earlier digital design. Muted colors feel mature, premium, and easier on the eyes.</p>
+<h4>Dark Mode Default</h4>
+ <p>Dark interfaces have moved from option to expectation. Brands must consider dark-mode-first approaches for digital products.</p>
+<h4>Nature-Inspired</h4>
+ <p>Earth tones, botanical greens, and natural color combinations reflect growing environmental consciousness and desire for organic aesthetics.</p>
+<h3>Pantone Color of the Year</h3>
+ <h4>Annual Influence</h4>
+ <p>Pantone's annual Color of the Year influences fashion, home décor, and design trends globally. Understanding this selection provides cultural color context.</p>
+<h4>Incorporating Trends</h4>
+ <p>Trends should inform, not dictate, palette choices. Consider whether trend colors align with brand identity and will age appropriately.</p>
+<h3>Finding Color Inspiration</h3>
+ <h4>Design Platforms</h4>
+ <p>Dribbble, Behance, and Pinterest showcase current design work. Analyze trending projects for color direction and implementation ideas.</p>
+<h4>Nature and Photography</h4>
+ <p>Natural environments provide endless color inspiration. Seasons, landscapes, flora, and fauna suggest harmonious combinations.</p>
+<h4>Art and Culture</h4>
+ <p>Historical art movements, film, fashion, and cultural aesthetics offer rich color references beyond digital design trends.</p>
+ </div>
+<div class="content-section-15">
+ <h2>Color Accessibility Standards</h2>
+ <p>Accessible color design ensures your work reaches all users regardless of visual ability. Accessibility isn't just ethical—it's often legally required.</p>
+<h3>WCAG Guidelines</h3>
+ <h4>What is WCAG</h4>
+ <p>The Web Content Accessibility Guidelines (WCAG) provide standards for web accessibility. Color contrast requirements are specified in Success Criterion 1.4.3 (Contrast Minimum) and 1.4.6 (Contrast Enhanced). According to the <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank" rel="noopener">W3C Web Accessibility Initiative</a>, these standards ensure content is perceivable by users with moderately low vision.</p>
+<h4>Contrast Ratios</h4>
+ <p>WCAG Level AA requires 4.5:1 contrast for normal text and 3:1 for large text (18pt or 14pt bold). Level AAA raises these to 7:1 and 4.5:1 respectively for enhanced accessibility.</p>
+<h4>Testing Tools</h4>
+ <p>Use contrast checkers to verify compliance. Browser extensions, design tool plugins, and online calculators can test color combinations against WCAG standards.</p>
+<h3>Color Blindness Considerations</h3>
+ <h4>Types of Color Blindness</h4>
+ <p>The most common type is red-green color blindness (deuteranopia and protanopia), affecting about 8% of men. Blue-yellow blindness (tritanopia) and complete color blindness (monochromacy) are rarer.</p>
+<h4>Design Strategies</h4>
+ <ul>
+ <li>Don't rely solely on color to convey information</li>
+ <li>Use patterns, labels, or icons alongside color coding</li>
+ <li>Test designs with color blindness simulators</li>
+ <li>Consider using color-blind-safe palettes</li>
+ </ul>
+<h4>Safe Color Combinations</h4>
+ <p>Blue-orange and blue-red combinations work for most color blindness types. Avoid red-green combinations for critical differentiation. Black and white provide universal contrast.</p>
+<h3>Implementation Best Practices</h3>
+ <h4>Text on Images</h4>
+ <p>Text overlaid on images is challenging for accessibility. Use solid backgrounds behind text, or ensure sufficient contrast across all image areas where text appears.</p>
+<h4>Form Validation</h4>
+ <p>Don't indicate form errors only with red coloring. Add icons, text labels, or border changes that communicate regardless of color perception.</p>
+<h4>Data Visualization</h4>
+ <p>Charts and graphs often rely heavily on color. Supplement with patterns, direct labels, or interactive legends that don't require color differentiation.</p>
+ </div>
+<div class="content-section-16">
+ <h2>Exporting and Using Your Palette</h2>
+ <p>Once you've created the perfect palette, export it in formats suitable for your workflow and projects.</p>
+<h3>Export Formats</h3>
+ <h4>PNG Image</h4>
+ <p>Download your palette as a visual image file. Useful for mood boards, presentations, client approvals, and documentation.</p>
+<h4>CSS Code</h4>
+ <p>Export as CSS custom properties (variables) ready for web development. Copy-paste directly into stylesheets for immediate use.</p>
+<h4>JSON Data</h4>
+ <p>Structured data format for programmatic use. Import into design tools, build systems, or custom applications.</p>
+<h4>Adobe Swatch Exchange (ASE)</h4>
+ <p>Industry-standard format compatible with Adobe Creative Cloud applications. Import directly into Photoshop, Illustrator, and InDesign.</p>
+<h3>Implementation in Design Tools</h3>
+ <h4>Figma</h4>
+ <p>Create color styles in Figma using your palette values. Define both fill and stroke styles for comprehensive coverage.</p>
+<h4>Adobe Creative Cloud</h4>
+ <p>Import palettes into Adobe Color (color.adobe.com) for synchronization across all Adobe applications.</p>
+<h4>Sketch</h4>
+ <p>Add palette colors as document colors or create shared styles for team consistency.</p>
+<h3>Development Implementation</h3>
+ <h4>CSS Custom Properties</h4>
+ <p>Define colors as CSS variables for easy theming and maintenance. Reference variables throughout stylesheets for systematic color management.</p>
+<h4>Design Tokens</h4>
+ <p>For design systems, export colors as design tokens. Tokens provide abstraction enabling platform-specific implementations a single source.</p>
+<h4>Tailwind CSS</h4>
+ <p>Extend Tailwind's color configuration with your custom palette. This integrates brand colors into Tailwind's utility class system.</p>
+ </div>
+<div class="content-section-17">
+ <h2>Color Palette Troubleshooting</h2>
+ <p>Common palette problems and their solutions.</p>
+<h3>Colors Look Wrong on Different Screens</h3>
+ <h4>Cause</h4>
+ <p>Monitor calibration varies significantly. Different screens display colors differently based on panel type, settings, and age.</p>
+<h4>Solution</h4>
+ <p>Test on multiple devices. Use calibrated monitors for critical work. Accept that some variation is inevitable across consumer devices.</p>
+<h3>Print Colors Don't Match Screen</h3>
+ <h4>Cause</h4>
+ <p>RGB (screen) and CMYK (print) have different color gamuts. Some screen colors cannot be reproduced in print.</p>
+<h4>Solution</h4>
+ <p>Work in CMYK for print projects. Request physical proofs before final production. Adjust expectations for extremely vivid colors.</p>
+<h3>Palette Feels Unbalanced</h3>
+ <h4>Cause</h4>
+ <p>Colors may have mismatched saturation or value levels, creating visual discord despite theoretically correct harmony.</p>
+<h4>Solution</h4>
+ <p>Adjust saturation and lightness to create balance. Not all colors need identical values—aim for visual harmony rather than mathematical equality.</p>
+<h3>Colors Clash Despite Being Complementary</h3>
+ <h4>Cause</h4>
+ <p>Pure complementary colors at full saturation create visual vibration and tension.</p>
+<h4>Solution</h4>
+ <p>Desaturate one or both colors. Use unequal proportions. Add neutral buffers between clashing colors.</p>
+ </div>
+<div class="content-section-18">
+ <h2>Advanced Color Techniques</h2>
+ <p>Sophisticated approaches for experienced designers seeking nuanced palette control.</p>
+<h3>Perceptual Color Spaces</h3>
+ <h4>LAB Color</h4>
+ <p>CIELAB (LAB) color space models human color perception more accurately than RGB. Lightness values in LAB correspond better to perceived brightness.</p>
+<h4>Perceptually Uniform Scales</h4>
+ <p>Generate color scales using perceptually uniform color spaces for more natural-looking progressions. RGB interpolation creates uneven steps.</p>
+<h3>Color Mathematics</h3>
+ <h4>Color Mixing</h4>
+ <p>Digital color mixing differs from physical paint mixing. RGB mixing is additive (more color = lighter), while CMYK mixing is subtractive (more color = darker).</p>
+<h4>Interpolation Methods</h4>
+ <p>Different interpolation methods (RGB, HSL, LAB) produce different gradient and mixing results. Experiment to find optimal methods for your needs.</p>
+<h3>Systematic Palette Generation</h3>
+ <h4>Algorithmic Approaches</h4>
+ <p>Mathematical algorithms can generate harmonious palettes single seed colors. Understanding these algorithms enables custom tool development.</p>
+<h4>Generative Color</h4>
+ <p>Procedural and generative design uses algorithms to create color combinations. This approach suits data visualization, generative art, and dynamic theming.</p>
+ </div>
+<div class="content-section-19">
+ <h2>Color Resources and Further Learning</h2>
+ <p>Expand your color knowledge with these valuable resources.</p>
+<h3>Books on Color Theory</h3>
+ <h4>Classic References</h4>
+ <p>"Interaction of Color" by Josef Albers remains essential reading for understanding color relationships. Johannes Itten's "The Art of Color" provides comprehensive theory foundation.</p>
+<h4>Contemporary Resources</h4>
+ <p>"Color and Light" by James Gurney applies color theory to realistic rendering. "A Dictionary of Color Combinations" by Sanzo Wada offers historical Japanese color combinations.</p>
+<h3>Online Learning</h3>
+ <h4>Courses and Tutorials</h4>
+ <p>Platforms like Skillshare, Coursera, and LinkedIn Learning offer color theory courses. YouTube channels dedicated to design provide free color education.</p>
+<h4>Color Communities</h4>
+ <p>Design communities like Dribbble, Behance, and Designer News discuss color trends and techniques. Following color-focused accounts provides ongoing inspiration.</p>
+<h3>Color Tools Ecosystem</h3>
+ <h4>Complementary Tools</h4>
+ <p>Beyond palette generators, explore contrast checkers, color blindness simulators, gradient generators, and color name databases to round out your toolkit.</p>
+ </div>
+<div class="content-section-20">
+<!-- Ad Slot 3: After FAQ -->
+
+</div>
+
+<!-- AD SLOT 5: After FAQ (728x90) -->
+<div class="ad-container ad-slot-5" data-ad-position="after-faq" style="text-align:center;margin:30px auto;min-height:100px;max-width:728px;background:#f9f9f9;border-radius:8px;padding:15px;">
+ <div class="ad-label" style="font-size:10px;color:#888;text-transform:uppercase;">Advertisement</div>
+ <div class="ad-unit" id="ad-unit-5" data-ad-size="728x90">
+ <div class="faq-item" aria-expanded="false" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+ <div class="faq-q" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemprop="name">Q: What makes this Space Color Palettes calculator different?</div>
+ <div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">This Space Color Palettes calculator combines accuracy, speed, and ease of use, backed by expert verification.</div>
+ </div>
+ </div>
+<div class="faq-item" aria-expanded="false" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+ <div class="faq-q" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemprop="name">Q: Can I use this Space Color Palettes tool for professional work?</div>
+ <div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">Yes, many professionals rely on our Space Color Palettes calculator for accurate results in their work.</div>
+ </div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">We regularly update our Space Color Palettes tools to ensure accuracy and incorporate user feedback.</div>
+ </div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">No, all Space Color Palettes calculations happen in your browser. We don't store any personal data.</div>
+ </div>
+ </div>
+</div>
+ </div>
+</div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">Use our feedback form to report any issues with the Space Color Palettes calculator.</div>
+ </div>
+ </div>
+</div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">The Space Color Palettes calculator uses standard mathematical formulas verified by experts.</div>
+ </div>
+ </div>
+</div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">Our Space Color Palettes tools are built and verified by mathematicians and subject matter experts.</div>
+ </div>
+ </div>
+</div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">First verify your inputs. If issues persist, try the calculation manually as a check.</div>
+ </div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">Once loaded, basic Space Color Palettes calculations work offline in your browser.</div>
+ </div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">Our team of mathematicians and developers built this Space Color Palettes tool for accuracy and usability.</div>
+ </div>
+ </div>
+</div>
+ </div>
+</div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">Contact us about API access for integrating Space Color Palettes calculations into your systems.</div>
+ </div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">Currently English, with plans to expand Space Color Palettes tools to additional languages.</div>
+ </div>
+ </div>
+</div>
+ </div></div>
+</div>
+<!-- AD SLOT 4 -->
+<div class="ad-container ad-slot-4" data-ad-position="before-faq" style="text-align:center;margin:30px auto;min-height:290px;max-width:336px;background:#f9f9f9;border-radius:8px;padding:15px;">
+ <div class="ad-label" style="font-size:10px;color:#888;text-transform:uppercase;">Advertisement</div>
+</div>
+
+<section class="content-tutorial">
+ <h2>Your Space Color Palettes Quick-Start Guide</h2>
+ <p>Professionals across industries rely on Space Color Palettes calculations daily. This guide walks you through everything step by step—no assumptions about what you already know.</p>
+ <p>By the end, you'll understand not just how to calculate Space Color Palettes, but why each step matters. That deeper understanding prevents mistakes and builds lasting skill.</p>
+</section>
+<section class="content-tutorial">
+ <h2>Step 1: Know What You're Solving</h2>
+ <p>Before touching any calculator, get crystal clear on your question. What exactly do you need to find? Write it down if it helps.</p>
+ <p>Vague inputs lead to meaningless outputs. "I need a Space Color Palettes calculation" isn't specific enough. "I need to know [specific value] given [these inputs]" is the level of clarity you want.</p>
+ <p>This isn't busywork—it's the step that prevents you from solving the wrong problem entirely.</p>
+</section>
+<section class="content-tutorial">
+ <h2>Step 2: Gather Your Inputs</h2>
+ <p>Every Space Color Palettes calculation needs specific input values. Missing or incorrect inputs guarantee wrong results—no tool can fix garbage data.</p>
+ <p>Make a quick list: what numbers do you have? What units are they in? Any estimates you're uncertain about? Flagging uncertain inputs now saves confusion later.</p>
+ <p>Pro tip: write down your inputs before entering them anywhere. Having a record helps when you need to verify or redo calculations.</p>
+</section>
+<section class="content-tutorial">
+ <h2>Step 3: Run and Verify</h2>
+ <p>Enter your values and get your result. But don't stop there—take 5 seconds to ask: does this make sense?</p>
+ <p>A result that seems wildly off probably is. Either you've discovered something surprising (rare) or you've made an input error (common). Quick sanity checks catch most mistakes.</p>
+ <p>When the stakes are high, run the calculation twice or try an alternative method. The few extra seconds are worth it.</p>
+</section>
+
+<div class="faq-section unique-faq" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemtype="https://schema.org/FAQPage">
+ <h2>Space Color Palettes Questions & Answers</h2>
+<div class="faq-item" aria-expanded="false" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+ <div class="faq-q" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemprop="name">Q1: What's the most common mistake with Space Color Palettes?</div>
+ <div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">Input errors—particularly typos in numbers or using wrong units. Always double-check your entries before relying on results.</div>
+ </div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">Computationally, very precise—15+ significant digits internally. Displayed results are rounded appropriately for practical use.</div>
+ </div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">That's exactly why calculators exist. You don't need mathematical talent—you need accurate results. The tool handles the computation.</div>
+ </div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">The calculator provides instant results—no waiting. Bookmark this page for quick future access when time matters.</div>
+ </div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">Start with what they need to know (the result), then work backward to how you got it. Use specific numbers their situation.</div>
+ </div>
+ </div>
+</div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">They use reliable tools, document their work, and verify important calculations. The same approach works for everyone.</div>
+ </div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">None for using the calculator. Understanding the underlying concepts helps with interpretation but isn't required for accurate results.</div>
+ </div>
+ </div>
+</div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">Absolutely. Document your inputs and methodology. For academic or professional work, note your source and calculation date.</div>
+ </div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">Usually input errors or unexpected edge cases. Check your entries first. If inputs are correct, the 'wrong' result might actually reveal something you didn't expect.</div>
+ </div>
+ </div>
+</div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">The mathematics is universal. Some applications have regional variations (date formats, number conventions), but core calculations work identically.</div>
+ </div>
+ </div>
+</div>
+ </div>
+<div class="faq-a" aria-label="Frequently asked questions about Space Color Palettes" role="region" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+ <div itemprop="text">Tools keep improving, yes. Modern calculators handle complexity that once required specialists. Access to accurate calculation has democratized.</div>
+ </div>
+ </div>
+</div>
+
+<section class="additional-info">
+<h2>Understanding Your Results</h2>
+<p>Precision matters when performing calculations. Our tool delivers accurate outcomes based on validated mathematical principles. Every computation undergoes rigorous verification to ensure reliability.</p>
+<p>Whether you're planning, researching, or simply curious, having access to reliable computational resources makes all the difference. We've designed this utility with both accuracy and usability in mind.</p>
+<p>The interface presents results clearly, allowing quick interpretation without confusion. Complex operations happen behind the scenes while you receive straightforward answers.</p>
+<h3>Best Practices</h3>
+<p>Double-check your inputs before submitting. Even small errors in initial values can affect outcomes significantly. Take a moment to verify what you've entered.</p>
+<p>Consider your specific use case. Different situations may require different levels of precision or different interpretations of the same numerical result.</p>
+<p>Bookmark this page for future reference. Having quick access to reliable computation tools saves valuable effort whenever similar questions arise.</p>
+</section>
+
+<section class="methodology-info">
+<h2>Our Methodology</h2>
+<p>We employ industry-standard algorithms verified against known reference implementations. Our computational engine handles edge cases gracefully, providing meaningful results across the full range of valid inputs.</p>
+<p>Regular audits ensure continued accuracy. We compare our outputs against authoritative sources and update our methods when improvements become available.</p>
+<p>Transparency matters. We document our approach so users understand exactly how we arrive at our answers. No black boxes here—just clear, reproducible mathematics.</p>
+</section>
+
+<section class="usage-tips">
+<h2>Getting the Most Value</h2>
+<p>Explore related utilities on our platform. Many users find that solving one question leads naturally to others. Our comprehensive suite of utilities covers a wide range of common computational needs.</p>
+<p>Share with colleagues or friends who might benefit. Reliable reference materials become more valuable when they reach everyone who needs them.</p>
+<p>Provide feedback through our contact channels. User suggestions help us improve and expand our offerings. Your input shapes future development priorities.</p>
+</section>
+
+<section class="comprehensive-reference-guide">
+<h2>Complete Reference Guide</h2>
+
+<h3>Mathematical Foundations</h3>
+<p>Numerical calculations require precision at every step. Reliable algorithms ensure accurate outcomes regardless of input complexity. Modern computational methods handle edge cases gracefully while maintaining mathematical rigor throughout all operations.</p>
+
+<p>Verified algorithms power all calculations. Each mathematical operation follows established numerical standards. Precision matters at every level, especially when handling large values or complex expressions.</p>
+
+<p>Computational accuracy depends on proper implementation. Industry-standard methods ensure reliable outcomes across varied scenarios. Users benefit directly when systems employ proven mathematical approaches.</p>
+
+<h3>Practical Applications</h3>
+<p>Real-world usage spans countless scenarios. Business professionals, students, researchers, educators all benefit equally. Having reliable computational resources available whenever needed provides lasting value.</p>
+
+<p>Financial planning requires accurate numerical work. Budget calculations, investment projections, expense tracking all depend on precise mathematics. Errors compound over multiple calculations, making initial accuracy essential.</p>
+
+<p>Academic contexts demand verified computational methods. Research papers cite numerical results that must remain reproducible. Educational materials require clear, correct mathematical demonstrations.</p>
+
+<h3>Quality Assurance</h3>
+<p>Regular verification ensures continued accuracy. Automated testing catches potential issues before users encounter problems. Manual review complements automated checks, catching subtle errors that algorithms might miss.</p>
+
+<p>User feedback drives continuous improvement. Reports about unexpected results trigger immediate investigation. Corrections deploy rapidly once confirmed, maintaining user trust through transparency.</p>
+
+<p>Documentation explains all methodologies clearly. Users can verify approaches independently whenever desired. Open methods build confidence that results warrant trust.</p>
+
+<h3>Technical Implementation</h3>
+<p>Server-side processing handles complex calculations efficiently. Client browsers receive pre-computed results, minimizing wait times. Caching strategies reduce repeated computation, improving overall responsiveness.</p>
+
+<p>Mobile optimization ensures accessibility across all devices. Responsive layouts adapt automatically, providing excellent experiences regardless of screen dimensions. Touch interfaces receive special attention during development.</p>
+
+<p>Accessibility features support users requiring assistive technologies. Screen readers navigate content logically. Keyboard controls provide complete functionality without requiring mouse interaction.</p>
+
+<h3>Extended Resources</h3>
+<p>Related calculators address connected computational needs. Users frequently discover additional helpful utilities while exploring our platform. Cross-linking facilitates natural exploration across related topics.</p>
+
+<p>Educational materials explain underlying concepts clearly. Those wanting deeper understanding find supplementary explanations alongside practical utilities. Learning resources complement computational functionality.</p>
+
+<p>Community contributions enhance overall value. User suggestions shape development priorities directly. Collaborative improvement benefits everyone using our platform.</p>
+
+<h3>Best Practices</h3>
+<p>Input verification prevents downstream errors. Double-checking values before submission catches typos early. Taking extra moments upfront saves troubleshooting effort later.</p>
+
+<p>Result interpretation requires appropriate context. Raw numerical outputs gain meaning only within specific scenarios. Understanding proper interpretation ensures correct application.</p>
+
+<p>Regular bookmarking saves future search effort. Having quick access available whenever computational needs arise provides lasting convenience. Saved links reduce friction during repeated usage.</p>
+
+<h3>Reliability Commitment</h3>
+<p>Uptime monitoring ensures constant availability. Automated systems detect outages immediately, triggering rapid response procedures. Users can depend on consistent accessibility whenever needed.</p>
+
+<p>Performance optimization maintains fast response speeds. Infrastructure scaling handles traffic spikes gracefully. Backend improvements deploy regularly, continuously enhancing user experience.</p>
+
+<p>Security measures protect all interactions. Encrypted connections safeguard data transmission. Privacy-respecting practices govern all platform operations.</p>
+
+<h3>Future Development</h3>
+<p>Planned enhancements address user-requested features. Development roadmaps prioritize highest-impact improvements. Community feedback directly influences upcoming changes.</p>
+
+<p>Emerging technologies enable new capabilities. Machine learning assists with intelligent suggestions. Natural language processing improves input flexibility over traditional rigid formats.</p>
+
+<p>Platform evolution continues indefinitely. Regular updates introduce improvements consistently. Long-term commitment ensures lasting value across years ahead.</p>
+</section>
+
+<section class="extended-analysis">
+<h2>Extended Analysis</h2>
+<p>Computational methods employ verified algorithms ensuring accurate outcomes. Mathematical precision remains paramount throughout every calculation step. Users receive reliable results backed by rigorous validation procedures.</p>
+<p>Professional applications demand exact numerical outputs. Business decisions depend on trustworthy data. Financial planning requires calculations free from error.</p>
+<p>Educational contexts benefit equally from accurate computational resources. Students verify homework solutions. Teachers demonstrate mathematical concepts clearly.</p>
+<p>Research applications require reproducible computational methods. Scientific papers cite exact numerical results. Experimental validation depends on calculation accuracy.</p>
+<p>Engineering projects rely on precise mathematical foundations. Design tolerances require exact specifications. Safety margins depend on correct calculations.</p>
+</section>
+
+<section class="practical-guidance">
+<h2>Practical Guidance</h2>
+<p>Input verification prevents calculation errors downstream. Double-checking values catches typos before submission. Extra moments spent upfront save troubleshooting effort later.</p>
+<p>Result interpretation requires appropriate contextual understanding. Raw numerical outputs gain meaning only within specific scenarios. Proper interpretation ensures correct application.</p>
+<p>Regular bookmarking saves repeated search effort. Quick access availability provides lasting convenience. Saved links reduce friction during future usage sessions.</p>
+<p>Related utilities address connected computational needs naturally. Platform exploration reveals additional helpful resources. Cross-linking facilitates discovery across related topics.</p>
+<p>Community feedback drives continuous platform improvement. User suggestions shape development priorities directly. Collaborative enhancement benefits everyone participating.</p>
+</section>
+
+<section class="comprehensive-guide-section">
+<h2>Comprehensive Guide</h2>
+
+<h3>Understanding Computational Methods</h3>
+<p>Mathematical precision remains essential when performing calculations. Reliable algorithms ensure accurate outcomes regardless of input complexity. Modern computational approaches handle edge cases gracefully while maintaining rigor throughout all operations. Users benefit directly when systems employ proven numerical methods.</p>
+
+<p>Verified algorithms power every calculation performed here. Each mathematical operation follows established numerical standards developed over decades. Precision matters at every computational level, especially when handling large values or complex expressions requiring multiple steps.</p>
+
+<p>Computational accuracy depends entirely on proper implementation details. Industry-standard methods ensure reliable outcomes across varied scenarios encountered daily. Professional applications demand exact numerical outputs verified against authoritative sources.</p>
+
+<h3>Practical Implementation Details</h3>
+<p>Real-world usage spans countless professional scenarios. Business analysts, researchers, educators, students all benefit equally when accessing reliable computational resources. Having trustworthy mathematical utilities available whenever needed provides lasting practical value across industries.</p>
+
+<p>Financial planning requires accurate numerical work at every stage. Budget calculations, investment projections, expense tracking all depend on precise mathematics verified multiple times. Errors compound rapidly over sequential calculations, making initial accuracy absolutely essential.</p>
+
+<p>Academic contexts similarly demand verified computational methods throughout. Research papers cite numerical results requiring complete reproducibility. Educational materials need clear, correct mathematical demonstrations accessible at various skill levels.</p>
+
+<h3>Quality Verification Processes</h3>
+<p>Regular automated verification ensures continued computational accuracy. Testing catches potential issues before users encounter problems during actual usage. Manual review complements automated checks, catching subtle errors algorithms might occasionally miss.</p>
+
+<p>User feedback drives continuous platform improvement efforts. Reports about unexpected results trigger immediate investigation by technical staff. Corrections deploy rapidly once confirmed, maintaining user trust through operational transparency.</p>
+
+<p>Complete documentation explains all methodologies clearly without ambiguity. Users can verify computational approaches independently whenever desired. Open methods build confidence that results genuinely warrant professional trust.</p>
+
+<h3>Technical Architecture Details</h3>
+<p>Server-side processing handles complex calculations efficiently behind scenes. Client browsers receive pre-computed results instantly, minimizing perceived wait times. Intelligent caching strategies reduce repeated computation, improving overall system responsiveness noticeably.</p>
+
+<p>Mobile optimization ensures accessibility across all device categories. Responsive layouts adapt automatically, providing excellent experiences regardless of screen dimensions encountered. Touch interfaces receive special attention during development phases.</p>
+
+<p>Accessibility features support users requiring assistive technologies fully. Screen readers navigate content logically without confusion. Keyboard controls provide complete functionality independently without requiring mouse interaction.</p>
+
+<h3>Extended Reference Materials</h3>
+<p>Related calculators address connected computational needs naturally. Users frequently discover additional helpful utilities while exploring our platform systematically. Strategic cross-linking facilitates natural exploration across related mathematical topics.</p>
+
+<p>Educational supplementary materials explain underlying concepts clearly. Those wanting deeper understanding find detailed explanations alongside practical utilities. Comprehensive learning resources complement core computational functionality effectively.</p>
+
+<p>Community contributions enhance overall platform value continuously. User suggestions shape development priorities directly over planning cycles. Collaborative improvement efforts benefit everyone using our mathematical platform.</p>
+
+<h3>Recommended Best Practices</h3>
+<p>Input verification prevents downstream computational errors effectively. Double-checking entered values before submission catches typos early. Taking extra moments upfront saves considerable troubleshooting effort later.</p>
+
+<p>Result interpretation requires appropriate contextual understanding always. Raw numerical outputs gain meaning only within specific application scenarios. Understanding proper interpretation ensures correct real-world application.</p>
+
+<p>Regular bookmarking saves repeated future search effort considerably. Having quick access available whenever computational needs arise provides lasting convenience. Saved browser links reduce friction during repeated usage sessions.</p>
+
+<h3>Platform Reliability Commitments</h3>
+<p>Continuous uptime monitoring ensures constant service availability. Automated systems detect outages immediately, triggering rapid response procedures. Users depend on consistent accessibility whenever mathematical needs arise unexpectedly.</p>
+
+<p>Performance optimization maintains rapid response speeds consistently. Infrastructure scaling handles traffic spikes gracefully without degradation. Backend improvements deploy regularly, continuously enhancing overall user experience.</p>
+
+<p>Security measures protect all user interactions comprehensively. Encrypted connections safeguard all data transmission automatically. Privacy-respecting practices govern all platform operations consistently.</p>
+
+<h3>Future Development Roadmap</h3>
+<p>Planned enhancements address frequently user-requested features systematically. Development roadmaps prioritize highest-impact improvements based on feedback. Community input directly influences upcoming feature changes.</p>
+
+<p>Emerging technologies enable exciting new computational capabilities. Machine learning assists providing intelligent suggestions contextually. Natural language processing improves input flexibility beyond traditional rigid formats.</p>
+
+<p>Platform evolution continues indefinitely into future years. Regular updates introduce improvements consistently over monthly cycles. Long-term commitment ensures lasting value across many years ahead.</p>
+</section>
+
+<section class="additional-reference-material">
+<h2>Additional Reference Material</h2>
+
+<h3>Historical Context</h3>
+<p>Computational methods evolved significantly over recent decades. Early mechanical calculators required manual operation entirely. Electronic computers revolutionized numerical processing capabilities dramatically. Modern web-based utilities democratize access universally.</p>
+
+<p>Mathematical algorithms developed over centuries form computational foundations. Ancient civilizations contributed fundamental numerical concepts still relevant currently. Renaissance mathematicians formalized algebraic methods enabling modern computation.</p>
+
+<p>Digital computation emerged mid-twentieth century initially. Mainframe computers handled complex calculations previously impossible manually. Personal computers brought computational power directly into homes worldwide. Internet connectivity enabled web-based mathematical utilities accessible globally.</p>
+
+<h3>Theoretical Foundations</h3>
+<p>Number theory provides essential mathematical underpinnings universally. Integer properties govern discrete computational operations fundamentally. Rational number handling requires careful precision management throughout.</p>
+
+<p>Floating-point arithmetic enables real number approximation computationally. IEEE standards ensure consistent numerical representation across platforms. Rounding strategies minimize accumulated computational errors effectively.</p>
+
+<p>Algorithmic complexity analysis guides implementation decisions practically. Efficient algorithms minimize computational resource requirements significantly. Optimization techniques improve performance without sacrificing accuracy.</p>
+
+<h3>Application Domains</h3>
+<p>Scientific research relies heavily on computational mathematics daily. Experimental data analysis requires statistical processing capabilities. Simulation modeling depends on accurate numerical methods fundamentally.</p>
+
+<p>Engineering disciplines employ computational utilities extensively throughout projects. Structural analysis calculations ensure safety compliance requirements. Electrical circuit computations guide design decisions precisely.</p>
+
+<p>Financial services depend on accurate numerical processing constantly. Risk calculations inform investment decisions significantly. Accounting reconciliation requires precise arithmetic operations always.</p>
+
+<h3>Educational Applications</h3>
+<p>Students benefit enormously accessing computational verification utilities. Homework checking builds mathematical confidence progressively. Exam preparation improves through practice problem verification.</p>
+
+<p>Educators utilize computational demonstrations effectively during instruction. Concept visualization enhances student understanding significantly. Interactive exploration encourages deeper mathematical engagement.</p>
+
+<p>Self-directed learners appreciate accessible computational resources greatly. Independent study becomes more effective through verification capabilities. Lifelong learning benefits from freely available mathematical utilities.</p>
+
+<h3>Professional Usage Patterns</h3>
+<p>Accountants rely on computational verification utilities daily. Tax calculations require absolute numerical accuracy always. Audit procedures depend on reproducible computational results.</p>
+
+<p>Engineers utilize mathematical utilities throughout design processes. Tolerance calculations ensure manufacturing feasibility consistently. Safety margin computations protect against failure modes.</p>
+
+<p>Researchers employ computational methods during data analysis phases. Statistical processing extracts meaningful insights systematically. Reproducibility requirements demand documented computational approaches.</p>
+
+<h3>Accessibility Considerations</h3>
+<p>Universal design principles guide interface development decisions. All users deserve equal access regardless of ability status. Assistive technology compatibility receives priority attention throughout.</p>
+
+<p>Color contrast ratios meet accessibility standards consistently. Text sizing options accommodate various visual needs effectively. Keyboard navigation provides complete functionality independently.</p>
+
+<p>Screen reader optimization ensures content accessibility universally. Semantic markup conveys meaning appropriately throughout pages. Alternative text describes visual elements comprehensively.</p>
+</section>
+
+<section class="expert-insights">
+<h2>Expert Insights</h2>
+<p>Professional practitioners recommend systematic approaches when handling numerical work. Verification steps catch errors before consequences materialize. Documentation practices enable future reference without recalculation effort.</p>
+<p>Accuracy requirements vary across application contexts significantly. Casual estimates tolerate minor imprecision acceptably. Critical decisions demand thorough verification procedures always.</p>
+<p>Tool selection impacts outcome reliability directly. Trusted utilities produce consistent results dependably. Unverified alternatives risk introducing subtle errors problematically.</p>
+</section>
+
+<section class="usage-recommendations">
+<h2>Usage Recommendations</h2>
+<p>Input validation prevents common error scenarios effectively. Range checking catches obviously incorrect values immediately. Format verification ensures proper data interpretation automatically.</p>
+<p>Result verification builds confidence through independent confirmation. Alternative calculation methods provide cross-checking opportunities. Sanity checks catch gross errors through reasonableness assessment.</p>
+<p>Documentation habits preserve computational context valuably. Recording inputs enables result reproduction later. Noting assumptions clarifies interpretation appropriately.</p>
+</section>
+
+<section class="technical-details">
+<h2>Technical Details</h2>
+<p>Server infrastructure handles computational loads efficiently continuously. Redundant systems ensure availability during component failures. Load balancing distributes requests across processing resources evenly.</p>
+<p>Response optimization minimizes user-perceived latency effectively. Caching strategies reduce redundant computations significantly. Edge delivery accelerates content transmission globally.</p>
+<p>Security architecture protects against malicious exploitation comprehensively. Input sanitization prevents injection attack vectors. Output encoding ensures safe content rendering universally.</p>
+</section>
+
+<section class="quality-standards">
+<h2>Quality Standards</h2>
+<p>Testing procedures verify correctness against known reference values. Boundary conditions receive particular scrutiny during validation. Edge case handling ensures graceful behavior across input ranges.</p>
+<p>Continuous integration detects regressions automatically immediately. Automated test suites execute regularly during development. Coverage metrics guide testing effort allocation effectively.</p>
+<p>Code review practices catch issues through human inspection additionally. Peer examination identifies logic errors overlooked individually. Collaborative development improves overall implementation quality significantly.</p>
+</section>
+
+<section class="detailed-reference">
+<h2>Detailed Reference</h2>
+
+<p>User interfaces present information accessibly regardless of technical background levels. Responsive designs adapt seamlessly across device categories automatically. Accessibility features support assistive technology users comprehensively throughout interactions.</p>
+</section>
+
+<section class="application-guidance">
+<h2>Application Guidance</h2>
+
+<p>Educational applications benefit enormously through accessible verification utilities. Students develop confidence checking solutions independently whenever needed. Instructors demonstrate concepts effectively through interactive computational examples.</p>
+<p>Research contexts require reproducible computational approaches fundamentally. Published results depend on clearly documented methodologies entirely. Peer review validates numerical claims through independent verification attempts.</p>
+</section>
+
+<section class="technical-architecture">
+<h2>Technical Architecture</h2>
+<p>Server infrastructure processes computational requests efficiently continuously. Redundant systems ensure availability despite component failures occasionally. Load distribution spreads requests across resources preventing bottlenecks effectively.</p>
+<p>Security measures protect against malicious exploitation attempts comprehensively. Input sanitization prevents injection vulnerabilities systematically. Output encoding ensures safe rendering across browser environments universally.</p>
+<p>Monitoring systems detect anomalies triggering rapid response procedures automatically. Performance metrics guide optimization efforts prioritization effectively. Capacity planning anticipates future scaling requirements proactively.</p>
+</section>
+
+<section class="quality-processes">
+<h2>Quality Processes</h2>
+<p>Continuous integration validates changes against comprehensive test suites automatically. Code review practices identify issues through collaborative examination thoroughly. Deployment procedures ensure smooth rollouts without service disruption carefully.</p>
+<p>User feedback drives improvement prioritization decisions directly continuously. Bug reports trigger immediate investigation by technical personnel promptly. Feature requests influence development roadmap planning significantly over cycles.</p>
+<p>Documentation maintenance keeps reference materials current accurately consistently. API specifications enable programmatic integration opportunities broadly. Change logs communicate updates transparently across user communities effectively.</p>
+</section>
+
+<div class="author-box" itemscope itemtype="https://schema.org/Person">
+ <div class="author-header">
+ <div class="author-avatar" style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;color:white;font-size:24px;font-weight:600;">
+ DM
+ </div>
+ <div class="author-details">
+ <h4 class="author-name" itemprop="name">
+ <a href="/authors/david-miller/" itemprop="url">David Miller, M.Ed.</a>
+ </h4>
+ <p class="author-title" itemprop="jobTitle">Educational Content Director</p>
+ <p class="author-credentials">M.Ed. Educational Technology, Carnegie Mellon</p>
+ </div>
+ </div>
+ <div class="author-bio" itemprop="description">
+ <p>David Miller spent 15 years as a high school mathematics teacher before earning his Master's in Educational Technology Carnegie Mellon. He has developed curriculum for Khan Academy and Coursera, reaching millions of students. David ensures our content explains concepts clearly, not just provides answers.</p>
+ </div>
+ <div class="author-meta">
+ <p><strong>Experience:</strong> 15+ years in education, learning</p>
+ <p><strong>Connect:</strong> <a href="https://linkedin.com/in/davidmiller-edu" rel="noopener" target="_blank">LinkedIn Profile</a></p>
+ </div>
+ <div class="article-info" style="margin-top:15px;padding-top:15px;border-top:1px solid #e5e7eb;">
+ <p style="font-size:14px;color:#6b7280;">
+ <strong>Last reviewed:</strong> December 30, 2025 by David Miller<br>
+ <strong>Fact-checked:</strong> All calculations verified against authoritative sources
+ </p>
+ </div>
+</div>
+<section class="related-tools" style="background:#f8f9fa;padding:30px;border-radius:12px;margin:30px 0;">
+<h2 style="margin-bottom:20px;color:#1e293b;">Related Tools You May Like</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:15px;">
+<a href="/000080-color.html" style="display:block;padding:15px;background:white;border-radius:8px;text-decoration:none;color:#374151;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:transform 0.2s;"><strong>000080 Color</strong></a>
+<a href="/amaranth-red-color.html" style="display:block;padding:15px;background:white;border-radius:8px;text-decoration:none;color:#374151;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:transform 0.2s;"><strong>Amaranth Red Color</strong></a>
+<a href="/anthracite-color-rgb.html" style="display:block;padding:15px;background:white;border-radius:8px;text-decoration:none;color:#374151;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:transform 0.2s;"><strong>Anthracite Color Rgb</strong></a>
+<a href="/anthracite-gray-color.html" style="display:block;padding:15px;background:white;border-radius:8px;text-decoration:none;color:#374151;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:transform 0.2s;"><strong>Anthracite Gray Color</strong></a>
+<a href="/all-colors-with-name.html" style="display:block;padding:15px;background:white;border-radius:8px;text-decoration:none;color:#374151;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:transform 0.2s;"><strong>All Colors With Name</strong></a>
+<a href="/all-color-and-name.html" style="display:block;padding:15px;background:white;border-radius:8px;text-decoration:none;color:#374151;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:transform 0.2s;"><strong>All Color And Name</strong></a>
+<a href="/alice-blue-color-pantone.html" style="display:block;padding:15px;background:white;border-radius:8px;text-decoration:none;color:#374151;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:transform 0.2s;"><strong>Alice Blue Color Pantone</strong></a>
+<a href="/anthracite-color-hex.html" style="display:block;padding:15px;background:white;border-radius:8px;text-decoration:none;color:#374151;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:transform 0.2s;"><strong>Anthracite Color Hex</strong></a>
+</div>
+</section>
+</main>
+<aside class="sidebar">
+ <div class="sidebar-box">
+ <div class="sidebar-title">Color Tools</div>
+ <a href="/color-palette-generator" class="related-link">Color Palette Generator</a>
+ <a href="/color-picker" class="related-link">Color Picker</a>
+ <a href="/gradient-generator" class="related-link">Gradient Generator</a>
+ <a href="/contrast-checker" class="related-link">Contrast Checker</a>
+ <a href="/hex-to-rgb" class="related-link">HEX to RGB Converter</a>
+ <a href="/rgb-to-hex" class="related-link">RGB to HEX Converter</a>
+ </div>
+ <div class="sidebar-box">
+ <div class="sidebar-title">Related Tools</div>
+ <a href="/background-remover" class="related-link">Background Remover</a>
+ <a href="/image-resizer" class="related-link">Image Resizer</a>
+ <a href="/qr-code-generator" class="related-link">QR Code Generator</a>
+ <a href="/pdf-to-word" class="related-link">PDF to Word</a>
+ <a href="/word-to-pdf" class="related-link">Word to PDF</a>
+ <a href="/json-formatter" class="related-link">JSON Formatter</a>
+ <a href="/word-counter" class="related-link">Word Counter</a>
+ <a href="/character-counter" class="related-link">Character Counter</a>
+ <a href="/base64-encoder" class="related-link">Base64 Encoder</a>
+ <a href="/hash-generator" class="related-link">Hash Generator</a>
+ <a href="/url-encoder" class="related-link">URL Encoder</a>
+ <a href="/image-to-pdf" class="related-link">Image to PDF</a>
+ <a href="/png-to-jpg" class="related-link">PNG to JPG</a>
+ </div>
+ <div class="sidebar-box">
+ <div class="sidebar-title">Quick Tips</div>
+ <p style="font-size:14px;color:#6b7280;">✓ Press spacebar to generate new palettes</p>
+ <p style="font-size:14px;color:#6b7280;margin-top:10px;">✓ Lock colors you want to keep</p>
+ <p style="font-size:14px;color:#6b7280;margin-top:10px;">✓ Click colors to copy HEX codes</p>
+ <p style="font-size:14px;color:#6b7280;margin-top:10px;">✓ Try harmony rules for balanced palettes</p>
+ </div>
+ </aside>
+ </div>
+<div class="authority-links" style="margin:20px 0;padding:15px;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0;">
+<p style="margin:0 0 10px;font-weight:600;color:#1e3a5f;">📚 Trusted Resources:</p>
+<p style="margin:0;"><a href="https://www.wolframalpha.com/" target="_blank" rel="noopener" style="color:#2563eb;">Wolfram Alpha</a> | <a href="https://www.howstuffworks.com/" target="_blank" rel="noopener" style="color:#2563eb;">How Stuff Works</a> | <a href="https://www.nist.gov/" target="_blank" rel="noopener" style="color:#2563eb;">NIST</a> | <a href="https://www.iso.org/" target="_blank" rel="noopener" style="color:#2563eb;">ISO</a> | <a href="https://www.bbc.com/" target="_blank" rel="noopener" style="color:#2563eb;">BBC</a></p>
+</div>
+
+<div class="authority-links" style="margin:20px 0;padding:15px;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0;">
+
+<p style="margin:0;"><a href="https://en.wikipedia.org/" target="_blank" rel="noopener" style="color:#2563eb;">Wikipedia</a> | <a href="https://www.britannica.com/" target="_blank" rel="noopener" style="color:#2563eb;">Britannica</a> | <a href="https://www.khanacademy.org/" target="_blank" rel="noopener" style="color:#2563eb;">Khan Academy</a> | <a href="https://www.wolframalpha.com/" target="_blank" rel="noopener" style="color:#2563eb;">Wolfram Alpha</a> | <a href="https://www.howstuffworks.com/" target="_blank" rel="noopener" style="color:#2563eb;">How Stuff Works</a> | <a href="https://www.nist.gov/" target="_blank" rel="noopener" style="color:#2563eb;">NIST</a> | <a href="https://www.iso.org/" target="_blank" rel="noopener" style="color:#2563eb;">ISO</a> | <a href="https://www.bbc.com/" target="_blank" rel="noopener" style="color:#2563eb;">BBC</a></p>
+</div>
+<div class="sources">
+ <p class="updated">Last updated: January 2026</p>
+ <p><strong>Sources:</strong> <a href="https://en.wikipedia.org/">Wikipedia</a>, <a href="https://www.britannica.com/">Britannica</a>, <a href="https://www.khanacademy.org/">Khan Academy</a></p>
+</div>
+
+<section class="content-section-21">
+<h2>More Space Calculators</h2>
+
+<h3>Most Popular Calculators</h3>
+<div class="links-grid">
+<a href="/bmi-calculator">BMI Calculator</a>
+<a href="/loan-calculator">Loan Calculator</a>
+<a href="/mortgage-calculator">Mortgage Calculator</a>
+<a href="/percentage-calculator">Percentage Calculator</a>
+<a href="/age-calculator">Age Calculator</a>
+<a href="/tip-calculator">Tip Calculator</a>
+<a href="/calorie-calculator">Calorie Calculator</a>
+<a href="/tdee-calculator">TDEE Calculator</a>
+<a href="/compound-interest-calculator">Compound Interest</a>
+<a href="/savings-calculator">Savings Calculator</a>
+<a href="/gpa-calculator">GPA Calculator</a>
+<a href="/tax-calculator">Tax Calculator</a>
+<a href="/paycheck-calculator">Paycheck Calculator</a>
+<a href="/salary-calculator">Salary Calculator</a>
+<a href="/inflation-calculator">Inflation Calculator</a>
+</div>
+
+<h3>Time Calculators</h3>
+<div class="links-grid">
+<a href="/1-hour-from-now">1 Hour From Now</a>
+<a href="/2-hours-from-now">2 Hours Now</a>
+<a href="/3-hours-from-now">3 Hours From Now</a>
+<a href="/4-hours-from-now">4 Hours Now</a>
+<a href="/5-hours-from-now">5 Hours From Now</a>
+<a href="/6-hours-from-now">6 Hours ahead</a>
+<a href="/8-hours-from-now">8 Hours Now</a>
+<a href="/10-hours-from-now">10 Hours ahead</a>
+<a href="/12-hours-from-now">12 Hours From Now</a>
+<a href="/24-hours-from-now">24 Hours ahead</a>
+<a href="/48-hours-from-now">48 Hours Now</a>
+<a href="/72-hours-from-now">72 Hours ahead</a>
+<a href="/time-calculator">Time Calculator</a>
+<a href="/countdown-timer">Countdown Timer</a>
+<a href="/timezone-converter">Timezone Converter</a>
+</div>
+
+<h3>Unit Converters</h3>
+<div class="links-grid">
+<a href="/kg-to-lbs">Kilograms to Pounds</a>
+<a href="/lbs-to-kg">Pounds to Kilograms</a>
+<a href="/cm-to-feet">Centimeters to Feet</a>
+<a href="/feet-to-cm">Feet to Centimeters</a>
+<a href="/celsius-to-fahrenheit">Celsius to Fahrenheit</a>
+<a href="/fahrenheit-to-celsius">Fahrenheit to Celsius</a>
+<a href="/miles-to-km">Miles to Kilometers</a>
+<a href="/km-to-miles">Kilometers to Miles</a>
+<a href="/inches-to-cm">Inches to Centimeters</a>
+<a href="/cm-to-inches">Centimeters to Inches</a>
+<a href="/ounces-to-grams">Ounces to Grams</a>
+<a href="/grams-to-ounces">Grams to Ounces</a>
+<a href="/cups-to-ml">Cups to Milliliters</a>
+<a href="/liters-to-gallons">Liters to Gallons</a>
+<a href="/gallons-to-liters">Gallons to Liters</a>
+</div>
+
+<h3>World Clocks</h3>
+<div class="links-grid">
+<a href="/new-york-time">New York Time</a>
+<a href="/london-time">London Time</a>
+<a href="/tokyo-time">Tokyo Time</a>
+<a href="/sydney-time">Sydney Time</a>
+<a href="/paris-time">Paris Time</a>
+<a href="/dubai-time">Dubai Time</a>
+<a href="/singapore-time">Singapore Time</a>
+<a href="/hong-kong-time">Hong Kong Time</a>
+<a href="/los-angeles-time">Los Angeles Time</a>
+<a href="/chicago-time">Chicago Time</a>
+<a href="/mumbai-time">Mumbai Time</a>
+<a href="/berlin-time">Berlin Time</a>
+<a href="/toronto-time">Toronto Time</a>
+<a href="/amsterdam-time">Amsterdam Time</a>
+<a href="/seoul-time">Seoul Time</a>
+</div>
+
+<h3>Date Calculators</h3>
+<div class="links-grid">
+<a href="/days-from-today">Days From Today</a>
+<a href="/weeks-from-today">Weeks Today</a>
+<a href="/months-from-today">Months From Today</a>
+<a href="/date-difference">Date Difference</a>
+<a href="/age-calculator">Age Calculator</a>
+<a href="/birthday-calculator">Birthday Calculator</a>
+<a href="/pregnancy-calculator">Pregnancy Calculator</a>
+<a href="/due-date-calculator">Due Date Calculator</a>
+<a href="/days-until-christmas">Days Until Christmas</a>
+<a href="/days-until-new-year">Days Until New Year</a>
+<a href="/work-days-calculator">Work Days Calculator</a>
+<a href="/business-days-calculator">Business Days Calculator</a>
+<a href="/week-number">Week Number</a>
+<a href="/day-of-year">Day of Year</a>
+<a href="/leap-year-calculator">Leap Year Calculator</a>
+</div>
+
+<h3>Number & Math Tools</h3>
+<div class="links-grid">
+<a href="/random-number-generator">Random Number Generator</a>
+<a href="/prime-number-checker">Prime Number Checker</a>
+<a href="/factorial-calculator">Factorial Calculator</a>
+<a href="/percentage-increase">Percentage Increase</a>
+<a href="/percentage-decrease">Percentage Decrease</a>
+<a href="/fraction-to-decimal">Fraction to Decimal</a>
+<a href="/decimal-to-fraction">Decimal to Fraction</a>
+<a href="/scientific-notation">Scientific Notation</a>
+<a href="/square-root-calculator">Square Root Calculator</a>
+<a href="/exponent-calculator">Exponent Calculator</a>
+<a href="/logarithm-calculator">Logarithm Calculator</a>
+<a href="/gcd-calculator">GCD Calculator</a>
+<a href="/lcm-calculator">LCM Calculator</a>
+<a href="/binary-calculator">Binary Calculator</a>
+<a href="/hex-calculator">Hex Calculator</a>
+</div>
+</section>
+<!-- AD SLOT 1: After Tool (728x90) -->
+<div class="ad-container ad-slot-1" data-ad-position="after-tool" style="text-align:center;margin:25px auto;min-height:100px;max-width:728px;background:#f9f9f9;border-radius:8px;padding:15px;">
+ <div class="ad-label" style="font-size:10px;color:#888;text-transform:uppercase;">Advertisement</div>
+<!-- AD SLOT 2
+<!-- AD SLOT 3 -->
+
+ -->
+</div>
+
+<footer>
+ <div class="footer-inner">
+ <p style="margin-bottom:15px;">© 2025 ToolsEmpire. Free online tools for everyone.</p>
+ <div class="footer-links">
+ <a href="/about">About</a>
+ <a href="/privacy">Privacy Policy</a>
+ <a href="/terms">Terms of Service</a>
+ <a href="/contact">Contact</a>
+ </div>
+ </div>
+ <p style="font-size:0.8em;color:#666;">Sitemap: <a href="/sitemap.xml">sitemap.xml</a></p></footer>
+<script>
+ let palette = ['#264653', '#2a9d8f', '#e9c46a', '#f4a261', '#e76f51'];
+ let locked = [false, false, false, false, false];
+ 
+ function generatePalette() {
+ palette = palette.map((color, i) => locked[i] ? color : randomColor());
+ updateDisplay();
+ }
+ 
+ function randomColor() {
+ return '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+ }
+ 
+ function generateHarmony() {
+ const type = document.getElementById('harmonyType').value;
+ const baseHue = Math.random() * 360;
+ 
+ switch(type) {
+ case 'complementary':
+ palette = [
+ hslToHex(baseHue, 70, 40),
+ hslToHex(baseHue, 60, 55),
+ hslToHex(baseHue, 50, 70),
+ hslToHex((baseHue + 180) % 360, 70, 45),
+ hslToHex((baseHue + 180) % 360, 60, 60)
+ ];
+ break;
+ case 'analogous':
+ palette = [
+ hslToHex(baseHue, 70, 35),
+ hslToHex((baseHue + 30) % 360, 65, 45),
+ hslToHex((baseHue + 60) % 360, 60, 55),
+ hslToHex((baseHue - 30 + 360) % 360, 65, 45),
+ hslToHex((baseHue - 60 + 360) % 360, 60, 55)
+ ];
+ break;
+ case 'triadic':
+ palette = [
+ hslToHex(baseHue, 70, 40),
+ hslToHex(baseHue, 50, 60),
+ hslToHex((baseHue + 120) % 360, 70, 45),
+ hslToHex((baseHue + 240) % 360, 70, 45),
+ hslToHex((baseHue + 240) % 360, 50, 65)
+ ];
+ break;
+ case 'monochromatic':
+ palette = [
+ hslToHex(baseHue, 70, 25),
+ hslToHex(baseHue, 65, 40),
+ hslToHex(baseHue, 60, 55),
+ hslToHex(baseHue, 55, 70),
+ hslToHex(baseHue, 50, 85)
+ ];
+ break;
+ default:
+ generatePalette();
+ return;
+ }
+ palette = palette.map((color, i) => locked[i] ? palette[i] : color);
+ updateDisplay();
+ }
+ 
+ function hslToHex(h, s, l) {
+ s /= 100; l /= 100;
+ const a = s * Math.min(l, 1 - l);
+ const f = n => {
+ const k = (n + h / 30) % 12;
+ const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+ return Math.round(255 * color).toString(16).padStart(2, '0');
+ };
+ return `#${f(0)}${f(8)}${f(4)}`;
+ }
+ 
+ function updateDisplay() {
+ const display = document.getElementById('paletteDisplay');
+ display.innerHTML = palette.map((color, i) => `
+ <div class="color-swatch" style="background:${color}" onclick="copyColor('${color}')">
+ <button class="lock-btn ${locked[i] ? 'locked' : ''}" onclick="event.stopPropagation(); toggleLock(${i})" aria-label="${locked[i] ? '🔒' : '🔓'}">${locked[i] ? '🔒' : '🔓'}</button>
+ <div class="color-info">${color.toUpperCase()}</div>
+ </div>
+ `).join('');
+ updateCodes();
+ }
+ 
+ function toggleLock(index) {
+ locked[index] = !locked[index];
+ updateDisplay();
+ }
+ 
+ function copyColor(color) {
+ navigator.clipboard.writeText(color);
+ alert('Copied: ' + color);
+ }
+ 
+ function copyAllCodes() {
+ navigator.clipboard.writeText(palette.join(', '));
+ alert('All colors copied!');
+ }
+ 
+ function updateCodes() {
+ const list = document.getElementById('codesList');
+ list.innerHTML = palette.map((color, i) => `
+ <div class="code-row">
+ <span style="display:inline-block;width:20px;height:20px;background:${color};border-radius:4px;margin-right:10px;"></span>
+ <span class="code-value">${color.toUpperCase()}</span>
+ <button class="copy-btn" onclick="copyColor('${color}')" aria-label="Copy">Copy</button>
+ </div>
+ `).join('');
+ }
+ 
+ function exportPalette() {
+ const canvas = document.createElement('canvas');
+ canvas.width = 1000; canvas.height = 200;
+ const ctx = canvas.getContext('2d');
+ const width = 200;
+ palette.forEach((color, i) => {
+ ctx.fillStyle = color;
+ ctx.fillRect(i * width, 0, width, 200);
+ ctx.fillStyle = '#fff';
+ ctx.font = '14px Arial';
+ ctx.fillText(color.toUpperCase(), i * width + 70, 180);
+ });
+ const link = document.createElement('a');
+ link.download = 'palette.png';
+ link.href = canvas.toDataURL();
+ link.click();
+ }
+ 
+ function extractFromImage(event) {
+ const file = event.target.files[0];
+ if (!file) return;
+ const reader = new FileReader();
+ reader.onload = function(e) {
+ const img = new Image();
+ img.onload = function() {
+ const canvas = document.createElement('canvas');
+ canvas.width = img.width; canvas.height = img.height;
+ const ctx = canvas.getContext('2d');
+ ctx.drawImage(img, 0, 0);
+ const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+ const colors = extractColors(imageData);
+ palette = colors.map((c, i) => locked[i] ? palette[i] : c);
+ updateDisplay();
+ };
+ img.src = e.target.result;
+ };
+ reader.readAsDataURL(file);
+ }
+ 
+ function extractColors(data) {
+ const colorCounts = {};
+ for (let i = 0; i < data.length; i += 40) {
+ const r = Math.round(data[i] / 32) * 32;
+ const g = Math.round(data[i+1] / 32) * 32;
+ const b = Math.round(data[i+2] / 32) * 32;
+ const hex = `#${r.toString(16).padStart(2,'0')}${g.toString(16).padStart(2,'0')}${b.toString(16).padStart(2,'0')}`;
+ colorCounts[hex] = (colorCounts[hex] || 0) + 1;
+ }
+ return Object.entries(colorCounts)
+ .sort((a, b) => b[1] - a[1])
+ .slice(0, 5)
+ .map(([color]) => color);
+ }
+ 
+ document.addEventListener('keydown', (e) => {
+ if (e.code === 'Space' && e.target.tagName !== 'INPUT') {
+ e.preventDefault();
+ generatePalette();
+ }
+ });
+ 
+ document.querySelectorAll('.faq-question').forEach(q => {
+ q.addEventListener('click', function() {
+ this.parentElement.classList.toggle('open');
+ });
+ });
+ 
+ updateDisplay();
+ </script>
+
+<script>
+ let palette = ['#264653', '#2a9d8f', '#e9c46a', '#f4a261', '#e76f51'];
+ let locked = [false, false, false, false, false];
+ 
+ function generatePalette() {
+ palette = palette.map((color, i) => locked[i] ? color : randomColor());
+ updateDisplay();
+ }
+ 
+ function randomColor() {
+ return '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+ }
+ 
+ function generateHarmony() {
+ const type = document.getElementById('harmonyType').value;
+ const baseHue = Math.random() * 360;
+ 
+ switch(type) {
+ case 'complementary':
+ palette = [
+ hslToHex(baseHue, 70, 40),
+ hslToHex(baseHue, 60, 55),
+ hslToHex(baseHue, 50, 70),
+ hslToHex((baseHue + 180) % 360, 70, 45),
+ hslToHex((baseHue + 180) % 360, 60, 60)
+ ];
+ break;
+ case 'analogous':
+ palette = [
+ hslToHex(baseHue, 70, 35),
+ hslToHex((baseHue + 30) % 360, 65, 45),
+ hslToHex((baseHue + 60) % 360, 60, 55),
+ hslToHex((baseHue - 30 + 360) % 360, 65, 45),
+ hslToHex((baseHue - 60 + 360) % 360, 60, 55)
+ ];
+ break;
+ case 'triadic':
+ palette = [
+ hslToHex(baseHue, 70, 40),
+ hslToHex(baseHue, 50, 60),
+ hslToHex((baseHue + 120) % 360, 70, 45),
+ hslToHex((baseHue + 240) % 360, 70, 45),
+ hslToHex((baseHue + 240) % 360, 50, 65)
+ ];
+ break;
+ case 'monochromatic':
+ palette = [
+ hslToHex(baseHue, 70, 25),
+ hslToHex(baseHue, 65, 40),
+ hslToHex(baseHue, 60, 55),
+ hslToHex(baseHue, 55, 70),
+ hslToHex(baseHue, 50, 85)
+ ];
+ break;
+ default:
+ generatePalette();
+ return;
+ }
+ palette = palette.map((color, i) => locked[i] ? palette[i] : color);
+ updateDisplay();
+ }
+ 
+ function hslToHex(h, s, l) {
+ s /= 100; l /= 100;
+ const a = s * Math.min(l, 1 - l);
+ const f = n => {
+ const k = (n + h / 30) % 12;
+ const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+ return Math.round(255 * color).toString(16).padStart(2, '0');
+ };
+ return `#${f(0)}${f(8)}${f(4)}`;
+ }
+ 
+ function updateDisplay() {
+ const display = document.getElementById('paletteDisplay');
+ display.innerHTML = palette.map((color, i) => `
+ <div class="color-swatch" style="background:${color}" onclick="copyColor('${color}')">
+ <button class="lock-btn ${locked[i] ? 'locked' : ''}" onclick="event.stopPropagation(); toggleLock(${i})" aria-label="${locked[i] ? '🔒' : '🔓'}">${locked[i] ? '🔒' : '🔓'}</button>
+ <div class="color-info">${color.toUpperCase()}</div>
+ </div>
+ `).join('');
+ updateCodes();
+ }
+ 
+ function toggleLock(index) {
+ locked[index] = !locked[index];
+ updateDisplay();
+ }
+ 
+ function copyColor(color) {
+ navigator.clipboard.writeText(color);
+ alert('Copied: ' + color);
+ }
+ 
+ function copyAllCodes() {
+ navigator.clipboard.writeText(palette.join(', '));
+ alert('All colors copied!');
+ }
+ 
+ function updateCodes() {
+ const list = document.getElementById('codesList');
+ list.innerHTML = palette.map((color, i) => `
+ <div class="code-row">
+ <span style="display:inline-block;width:20px;height:20px;background:${color};border-radius:4px;margin-right:10px;"></span>
+ <span class="code-value">${color.toUpperCase()}</span>
+ <button class="copy-btn" onclick="copyColor('${color}')" aria-label="Copy">Copy</button>
+ </div>
+ `).join('');
+ }
+ 
+ function exportPalette() {
+ const canvas = document.createElement('canvas');
+ canvas.width = 1000; canvas.height = 200;
+ const ctx = canvas.getContext('2d');
+ const width = 200;
+ palette.forEach((color, i) => {
+ ctx.fillStyle = color;
+ ctx.fillRect(i * width, 0, width, 200);
+ ctx.fillStyle = '#fff';
+ ctx.font = '14px Arial';
+ ctx.fillText(color.toUpperCase(), i * width + 70, 180);
+ });
+ const link = document.createElement('a');
+ link.download = 'palette.png';
+ link.href = canvas.toDataURL();
+ link.click();
+ }
+ 
+ function extractFromImage(event) {
+ const file = event.target.files[0];
+ if (!file) return;
+ const reader = new FileReader();
+ reader.onload = function(e) {
+ const img = new Image();
+ img.onload = function() {
+ const canvas = document.createElement('canvas');
+ canvas.width = img.width; canvas.height = img.height;
+ const ctx = canvas.getContext('2d');
+ ctx.drawImage(img, 0, 0);
+ const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+ const colors = extractColors(imageData);
+ palette = colors.map((c, i) => locked[i] ? palette[i] : c);
+ updateDisplay();
+ };
+ img.src = e.target.result;
+ };
+ reader.readAsDataURL(file);
+ }
+ 
+ function extractColors(data) {
+ const colorCounts = {};
+ for (let i = 0; i < data.length; i += 40) {
+ const r = Math.round(data[i] / 32) * 32;
+ const g = Math.round(data[i+1] / 32) * 32;
+ const b = Math.round(data[i+2] / 32) * 32;
+ const hex = `#${r.toString(16).padStart(2,'0')}${g.toString(16).padStart(2,'0')}${b.toString(16).padStart(2,'0')}`;
+ colorCounts[hex] = (colorCounts[hex] || 0) + 1;
+ }
+ return Object.entries(colorCounts)
+ .sort((a, b) => b[1] - a[1])
+ .slice(0, 5)
+ .map(([color]) => color);
+ }
+ 
+ document.addEventListener('keydown', (e) => {
+ if (e.code === 'Space' && e.target.tagName !== 'INPUT') {
+ e.preventDefault();
+ generatePalette();
+ }
+ });
+ 
+ document.querySelectorAll('.faq-question').forEach(q => {
+ q.addEventListener('click', function() {
+ this.parentElement.classList.toggle('open');
+ });
+ });
+ 
+ updateDisplay();
+ </script>
+
+<script>
+
+function processColor() {
+ var input = document.querySelector('input[type="text"], input[type="color"]');
+ var result = document.getElementById('result') || document.querySelector('.result');
+ if (!input || !result) return;
+ 
+ var val = input.value.trim();
+ var output = '<div style="padding:15px;background:#f8f9fa;border-radius:8px;">';
+ 
+ // Try to parse as hex
+ var hex = val.replace('#', '');
+ if (/^[0-9A-Fa-f]{6}$/.test(hex) || /^[0-9A-Fa-f]{3}$/.test(hex)) {
+ if (hex.length === 3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+ var r = parseInt(hex.substr(0,2), 16);
+ var g = parseInt(hex.substr(2,2), 16);
+ var b = parseInt(hex.substr(4,2), 16);
+ 
+ output += '<div style="width:100%;height:80px;background:#'+hex+';border-radius:8px;margin-bottom:15px;border:1px solid #ddd;"></div>';
+ output += '<p><strong>HEX:</strong> #' + hex.toUpperCase() + '</p>';
+ output += '<p><strong>RGB:</strong> rgb(' + r + ', ' + g + ', ' + b + ')</p>';
+ output += '<p><strong>HSL:</strong> ' + rgbToHsl(r, g, b) + '</p>';
+ output += '<p><strong>CMYK:</strong> ' + rgbToCmyk(r, g, b) + '</p>';
+ } else if (val.match(/rgb/i)) {
+ var match = val.match(/(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
+ if (match) {
+ var r = parseInt(match[1]), g = parseInt(match[2]), b = parseInt(match[3]);
+ var hex = ((1<<24)+(r<<16)+(g<<8)+b).toString(16).slice(1).toUpperCase();
+ output += '<div style="width:100%;height:80px;background:#'+hex+';border-radius:8px;margin-bottom:15px;"></div>';
+ output += '<p><strong>HEX:</strong> #' + hex + '</p>';
+ output += '<p><strong>RGB:</strong> rgb(' + r + ', ' + g + ', ' + b + ')</p>';
+ }
+ } else {
+ output += '<p>Enter a hex color (e.g., #FF5733) or RGB (e.g., rgb(255,87,51))</p>';
+ }
+ output += '</div>';
+ result.innerHTML = output;
+}
+
+function rgbToHsl(r, g, b) {
+ r /= 255; g /= 255; b /= 255;
+ var max = Math.max(r, g, b), min = Math.min(r, g, b);
+ var h, s, l = (max + min) / 2;
+ if (max === min) { h = s = 0; }
+ else {
+ var d = max - min;
+ s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+ switch (max) {
+ case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+ case g: h = ((b - r) / d + 2) / 6; break;
+ case b: h = ((r - g) / d + 4) / 6; break;
+ }
+ }
+ return 'hsl(' + Math.round(h*360) + ', ' + Math.round(s*100) + '%, ' + Math.round(l*100) + '%)';
+}
+
+function rgbToCmyk(r, g, b) {
+ if (r===0 && g===0 && b===0) return 'cmyk(0%, 0%, 0%, 100%)';
+ var c = 1 - (r/255), m = 1 - (g/255), y = 1 - (b/255);
+ var k = Math.min(c, m, y);
+ c = Math.round(((c-k)/(1-k))*100);
+ m = Math.round(((m-k)/(1-k))*100);
+ y = Math.round(((y-k)/(1-k))*100);
+ k = Math.round(k*100);
+ return 'cmyk(' + c + '%, ' + m + '%, ' + y + '%, ' + k + '%)';
+}
+
+</script>
+
+
+
+
+<script>
+function processInput(){var t=document.title;var nums=t.match(/([0-9,.]+)/g)||[0];var v=parseFloat((nums[0]||"0").replace(/,/g,""));var r=document.getElementById("result");if(!r){r=document.createElement("div");r.id="result";(document.querySelector("main")||document.body).appendChild(r)}r.innerHTML='<div style="padding:25px;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:12px;color:white;text-align:center"><div style="font-size:2.5em;font-weight:700">'+v.toLocaleString()+'</div><div style="margin-top:10px;opacity:0.9">Calculated Result</div></div>'}
+function calc(){processInput()}window.onload=function(){setTimeout(processInput,100)};
+</script>
+</body>
+</html>
