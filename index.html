@@ -38,6 +38,7 @@ a,button{-webkit-tap-highlight-color:transparent}
 .input::placeholder{color:#aaa}
 .input:focus{border-color:#1a1a1a}
 .success-message{padding:18px 24px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;color:#166534;font-weight:500;text-align:center}
+.error-message{padding:18px 24px;background:#fef2f2;border:1px solid #fecaca;border-radius:12px;color:#dc2626;font-weight:500;text-align:center}
 .preview-section{padding:0 20px 80px}
 .preview-container{max-width:960px;margin:0 auto;background:#fafafa;border-radius:16px;border:1px solid #eee;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.06)}
 .browser-chrome{display:flex;align-items:center;gap:8px;padding:14px 18px;background:#fff;border-bottom:1px solid #eee}
@@ -167,8 +168,8 @@ a,button{-webkit-tap-highlight-color:transparent}
 <h1 class="hero-title">AI chat with<br>permanent memory</h1>
 <p class="hero-subtitle">Every conversation stored, indexed, and searchable. Use your own API keys from OpenAI, Anthropic, or Google.</p>
 <div id="waitlist" class="waitlist-form">
-<form id="waitlistForm" class="form-row">
-<input type="email" id="emailInput" class="input" placeholder="you@email.com" required>
+<form id="waitlistForm1" class="form-row">
+<input type="email" class="input" placeholder="you@email.com" required>
 <button type="submit" class="btn btn-primary">Join waitlist</button>
 </form>
 </div>
@@ -293,16 +294,56 @@ a,button{-webkit-tap-highlight-color:transparent}
 </footer>
 
 <script>
+const SUPABASE_URL = 'https://synpjcammfjebwsmtfpz.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5bnBqY2FtbWZqZWJ3c210ZnB6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk0OTU3NDcsImV4cCI6MjA4NTA3MTc0N30.iHXwtPV10JGPL5OKgkpd6WxerTQoI4YE4-ld9g38eRQ';
+
+async function submitToWaitlist(email) {
+  const response = await fetch(`${SUPABASE_URL}/rest/v1/waitlist`, {
+    method: 'POST',
+    headers: {
+      'apikey': SUPABASE_KEY,
+      'Authorization': `Bearer ${SUPABASE_KEY}`,
+      'Content-Type': 'application/json',
+      'Prefer': 'return=minimal'
+    },
+    body: JSON.stringify({
+      email: email,
+      status: 'pending'
+    })
+  });
+  
+  if (!response.ok) {
+    const error = await response.json();
+    if (error.code === '23505') {
+      throw new Error('already_exists');
+    }
+    throw new Error('failed');
+  }
+  return true;
+}
+
 document.querySelectorAll('form').forEach(form => {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const input = form.querySelector('input[type="email"]');
     const btn = form.querySelector('button');
-    if (!input.value || !input.value.includes('@')) return;
+    const email = input.value.trim();
+    
+    if (!email || !email.includes('@')) return;
+    
     btn.textContent = 'Joining...';
     btn.disabled = true;
-    await new Promise(r => setTimeout(r, 1200));
-    form.innerHTML = '<div class="success-message">✓ You\'re on the list</div>';
+    
+    try {
+      await submitToWaitlist(email);
+      form.innerHTML = '<div class="success-message">✓ You\'re on the list!</div>';
+    } catch (err) {
+      if (err.message === 'already_exists') {
+        form.innerHTML = '<div class="success-message">✓ You\'re already on the list!</div>';
+      } else {
+        form.innerHTML = '<div class="error-message">Something went wrong. Try again.</div>';
+      }
+    }
   });
 });
 </script>
