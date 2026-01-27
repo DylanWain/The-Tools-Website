@@ -2,115 +2,309 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TheToolsWebsite - Free Online Calculators, Converters & Tools</title>
-<meta name="description" content="Free online calculators, converters, generators, and tools. Over 11,700 professional tools for math, finance, health, text processing, and more.">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Tools AI - AI Chat with Permanent Memory</title>
+<meta name="description" content="AI chat that remembers everything. Every conversation stored, indexed, and searchable. Use your own API keys from OpenAI, Anthropic, or Google.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:#333;background:#fff}
-header{background:linear-gradient(135deg,#1e3a5f,#2d5a87);padding:20px;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
-.header-inner{max-width:1200px;margin:0 auto;text-align:center}
-.logo{color:white;font-size:36px;font-weight:700}.logo span{color:#10b981}
-.tagline{color:rgba(255,255,255,0.9);font-size:18px;margin-top:10px}
-.container{max-width:1200px;margin:40px auto;padding:0 20px}
-h1{color:#1e3a5f;font-size:32px;margin-bottom:30px;text-align:center}
-.categories-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;margin-top:40px}
-.category-card{background:white;border-radius:12px;padding:25px;box-shadow:0 4px 20px rgba(0,0,0,0.08);transition:transform 0.2s,box-shadow 0.2s;text-decoration:none;display:block}
-.category-card:hover{transform:translateY(-5px);box-shadow:0 8px 30px rgba(0,0,0,0.12)}
-.category-icon{font-size:48px;margin-bottom:15px}
-.category-name{color:#1e3a5f;font-size:22px;font-weight:700;margin-bottom:8px}
-.category-desc{color:#6b7280;font-size:14px;margin-bottom:12px}
-.category-count{color:#10b981;font-weight:600;font-size:16px}
-.top-tools{margin-top:15px;padding-top:15px;border-top:1px solid #e5e7eb}
-.top-tools h4{font-size:13px;color:#6b7280;margin-bottom:8px}
-.top-tools a{display:block;color:#2563eb;font-size:13px;margin-bottom:5px;text-decoration:none}
-.top-tools a:hover{text-decoration:underline}
-footer{background:#1e293b;color:white;padding:40px 20px;margin-top:80px}
-.footer-inner{max-width:1200px;margin:0 auto;text-align:center}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{min-height:100vh;background:#fff;color:#1a1a1a;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;overflow-x:hidden}
+a,button{-webkit-tap-highlight-color:transparent}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #f0f0f0}
+.nav-inner{max-width:1140px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:700;font-size:18px;letter-spacing:-0.5px}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{color:#666;text-decoration:none;font-size:14px}
+.nav-links a:hover{color:#1a1a1a}
+.btn{padding:14px 24px;border:none;border-radius:8px;font-size:15px;font-weight:500;cursor:pointer;white-space:nowrap;transition:opacity 0.2s}
+.btn:hover{opacity:0.9}
+.btn-primary{background:#1a1a1a;color:#fff}
+.btn-sm{padding:10px 18px;font-size:14px}
+.mobile-menu-btn{display:none;background:none;border:none;padding:8px;cursor:pointer}
+.hamburger{display:flex;flex-direction:column;gap:5px;width:24px}
+.hamburger span{display:block;height:2px;background:#1a1a1a;border-radius:2px;transition:all 0.3s ease}
+.mobile-menu{display:none;padding:16px 20px 20px;border-top:1px solid #f0f0f0;background:#fff}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:12px 0;color:#666;text-decoration:none;font-size:16px;border-bottom:1px solid #f0f0f0}
+.hero{padding:140px 20px 80px}
+.hero-content{max-width:720px;margin:0 auto;text-align:center}
+.badge{display:inline-block;padding:6px 14px;background:#f5f5f5;border-radius:100px;font-size:13px;color:#666;margin-bottom:24px;font-weight:500}
+.hero-title{font-size:48px;font-weight:600;line-height:1.1;letter-spacing:-1.5px;margin-bottom:20px;color:#1a1a1a}
+.hero-subtitle{font-size:18px;line-height:1.6;color:#666;margin-bottom:32px;max-width:540px;margin-left:auto;margin-right:auto}
+.waitlist-form{max-width:420px;margin:0 auto}
+.form-row{display:flex;gap:10px;background:#f8f8f8;padding:6px;border-radius:12px}
+.input{flex:1;min-width:0;padding:14px 16px;font-size:16px;background:#fff;border:1px solid #e8e8e8;border-radius:8px;outline:none;color:#1a1a1a;-webkit-appearance:none}
+.input::placeholder{color:#aaa}
+.input:focus{border-color:#1a1a1a}
+.success-message{padding:18px 24px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;color:#166534;font-weight:500;text-align:center}
+.preview-section{padding:0 20px 80px}
+.preview-container{max-width:960px;margin:0 auto;background:#fafafa;border-radius:16px;border:1px solid #eee;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.06)}
+.browser-chrome{display:flex;align-items:center;gap:8px;padding:14px 18px;background:#fff;border-bottom:1px solid #eee}
+.browser-dot{width:12px;height:12px;border-radius:50%}
+.red{background:#ff5f57}.yellow{background:#febc2e}.green{background:#28c840}
+.chat-preview{display:flex;min-height:380px}
+.chat-sidebar{width:200px;background:#fff;border-right:1px solid #eee;padding:16px;flex-shrink:0}
+.new-chat-btn{padding:10px 12px;background:#f5f5f5;border-radius:8px;font-size:13px;margin-bottom:20px;display:flex;align-items:center;gap:8px;color:#666}
+.chat-label{font-size:11px;color:#999;font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px}
+.chat-item{padding:10px 12px;font-size:13px;color:#888;border-radius:6px;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chat-item.active{color:#1a1a1a;background:#f5f5f5}
+.chat-area{flex:1;padding:24px;display:flex;flex-direction:column;gap:24px;min-width:0}
+.message{display:flex;gap:12px}
+.avatar{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0}
+.avatar.user{background:#e5e5e5}
+.avatar.ai{background:#1a1a1a;color:#fff}
+.message-text{font-size:14px;line-height:1.6;color:#1a1a1a}
+.message-content{flex:1;min-width:0}
+.code-block{background:#f5f5f5;border-radius:8px;padding:14px 16px;font-size:14px;line-height:1.7;color:#444;margin-top:14px}
+.code-block div{margin-bottom:6px}
+.code-block div:last-child{margin-bottom:0}
+.memory-tag{margin-top:14px;padding:10px 14px;background:#f0f9ff;border-radius:6px;font-size:12px;color:#0369a1;display:flex;align-items:center;gap:6px}
+.problem-section{padding:80px 20px;background:#fafafa}
+.problem-content{max-width:640px;margin:0 auto;text-align:center}
+.problem-content h2{font-size:28px;font-weight:600;letter-spacing:-0.5px;margin-bottom:16px;color:#1a1a1a}
+.problem-content p{font-size:17px;line-height:1.7;color:#666}
+.section{padding:80px 20px}
+.section.alt{background:#fafafa}
+.section-inner{max-width:900px;margin:0 auto}
+.section-title{font-size:28px;font-weight:600;letter-spacing:-0.5px;margin-bottom:48px;text-align:center;color:#1a1a1a}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.step-num{font-size:42px;font-weight:600;color:#e5e5e5;margin-bottom:12px;letter-spacing:-2px}
+.step-title{font-size:17px;font-weight:600;margin-bottom:8px;color:#1a1a1a}
+.step-desc{font-size:15px;line-height:1.6;color:#666}
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.feature-card{padding:24px;background:#fff;border-radius:12px;border:1px solid #eee}
+.feature-card h3{font-size:16px;font-weight:600;margin-bottom:8px;color:#1a1a1a}
+.feature-card p{font-size:15px;line-height:1.6;color:#666;margin:0}
+.cta-section{padding:100px 20px;text-align:center}
+.cta-content{max-width:480px;margin:0 auto}
+.cta-content h2{font-size:28px;font-weight:600;letter-spacing:-0.5px;margin-bottom:16px;color:#1a1a1a}
+.cta-content p{font-size:17px;line-height:1.6;color:#666;margin-bottom:28px}
+.footer{padding:24px 20px;border-top:1px solid #eee}
+.footer-inner{max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.footer-logo{font-size:14px;color:#888;font-weight:500}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:14px;color:#888;text-decoration:none}
+.footer-links a:hover{color:#1a1a1a}
+@media(max-width:768px){
+.nav-links{display:none}
+.mobile-menu-btn{display:block}
+.hero{padding:120px 20px 60px}
+.hero-title{font-size:36px;letter-spacing:-1px}
+.hero-subtitle{font-size:16px}
+.chat-sidebar{display:none}
+.chat-preview{min-height:300px}
+.chat-area{padding:20px}
+.steps-grid{grid-template-columns:1fr;gap:32px}
+.features-grid{grid-template-columns:1fr}
+.problem-content h2,.section-title,.cta-content h2{font-size:24px}
+.problem-content p,.cta-content p{font-size:16px}
+}
+@media(max-width:480px){
+.nav-inner{padding:14px 16px}
+.hero{padding:110px 16px 50px}
+.hero-title{font-size:32px;letter-spacing:-0.5px}
+.hero-subtitle{font-size:15px;margin-bottom:28px}
+.badge{font-size:12px;padding:5px 12px;margin-bottom:20px}
+.form-row{flex-direction:column}
+.btn{width:100%;padding:16px 24px}
+.input{width:100%}
+.preview-section{padding:0 16px 50px}
+.preview-container{border-radius:12px}
+.browser-chrome{padding:12px 14px}
+.browser-dot{width:10px;height:10px}
+.chat-area{padding:16px;gap:20px}
+.message-text{font-size:13px}
+.code-block{padding:12px;font-size:13px}
+.memory-tag{font-size:11px;padding:8px 12px}
+.problem-section,.section{padding:60px 16px}
+.section-title{margin-bottom:36px}
+.step-num{font-size:36px}
+.step-title{font-size:16px}
+.step-desc{font-size:14px}
+.feature-card{padding:20px}
+.feature-card h3{font-size:15px}
+.feature-card p{font-size:14px}
+.cta-section{padding:70px 16px}
+.footer{padding:20px 16px}
+.footer-inner{flex-direction:column;gap:16px;text-align:center}
+.footer-links{gap:20px}
+}
+@media(max-width:375px){
+.hero-title{font-size:28px}
+.hero-subtitle{font-size:14px}
+.problem-content h2,.section-title,.cta-content h2{font-size:22px}
+}
+@supports(padding-top:env(safe-area-inset-top)){
+.nav{padding-top:env(safe-area-inset-top)}
+.footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
+}
 </style>
 </head>
 <body>
-<header>
-<div class="header-inner">
-<div class="logo">The<span>Tools</span>Website</div>
-<div class="tagline">Over 11,700 Free Professional Tools & Calculators</div>
+<nav class="nav">
+<div class="nav-inner">
+<span class="logo">Tools AI</span>
+<div class="nav-links">
+<a href="#how-it-works">How it works</a>
+<a href="#features">Features</a>
+<button class="btn btn-primary btn-sm" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join waitlist</button>
 </div>
-</header>
-<div class="container">
-<h1>Choose Your Category</h1>
-<div class="categories-grid">
+<button class="mobile-menu-btn" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Toggle menu">
+<span class="hamburger"><span></span><span></span><span></span></span>
+</button>
+</div>
+<div id="mobileMenu" class="mobile-menu">
+<a href="#how-it-works">How it works</a>
+<a href="#features">Features</a>
+<button class="btn btn-primary" style="width:100%;margin-top:8px" onclick="document.getElementById('mobileMenu').classList.remove('open');document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join waitlist</button>
+</div>
+</nav>
 
-<a href="/calculators.html" class="category-card">
-<div class="category-icon">🧮</div>
-<div class="category-name">Calculators</div>
-<div class="category-desc">Professional calculators for math, finance, health, and science.</div>
-<div class="category-count">551 Tools</div>
-<div class="top-tools">
-<h4>Popular Tools:</h4>
-<a href="/10-key-calculator-online.html">10 Key Calculator Online</a>\n<a href="/10-key-calculator.html">10 Key Calculator</a>\n<a href="/100-days-from-today.html">100 Days From Today - Date Calculator</a>\n<a href="/107-days-from-today.html">107 Days From Today - Date Calculator</a>\n<a href="/113-days-from-today.html">113 Days From Today - Date Calculator</a>\n</div></a>\n
-<a href="/converters.html" class="category-card">
-<div class="category-icon">🔄</div>
-<div class="category-name">Converters</div>
-<div class="category-desc">Convert between units, currencies, and measurements instantly.</div>
-<div class="category-count">357 Tools</div>
-<div class="top-tools">
-<h4>Popular Tools:</h4>
-<a href="/1-million-in-crores.html">1 Million in Crores - Convert Millions to Crore</a>\n<a href="/10-million-in-crores.html">10 Million in Crores - Convert Millions to Crore</a>\n<a href="/10-usd-to-inr.html">10 USD to INR - Convert 10 Dollars to Rupees</a>\n<a href="/100-aed-to-inr.html">100 AED to INR - Convert 100 Dirhams to Rupees</a>\n<a href="/100-kg-to-lbs.html">100 kg to lbs - Convert 100 Kilograms to Pounds</a>\n</div></a>\n
-<a href="/generators.html" class="category-card">
-<div class="category-icon">⚡</div>
-<div class="category-name">Generators</div>
-<div class="category-desc">Generate passwords, numbers, names, and random data.</div>
-<div class="category-count">605 Tools</div>
-<div class="top-tools">
-<h4>Popular Tools:</h4>
-<a href="/10-digit-number-generator.html">10 Digit Number Generator</a>\n<a href="/10-digit-random-number-generator.html">10 Digit Random Number Generator</a>\n<a href="/12-digit-random-number-generator.html">12 Digit Random Number Generator</a>\n<a href="/12-random-numbers.html">12 Random Numbers</a>\n<a href="/16-random-numbers.html">16 Random Numbers</a>\n</div></a>\n
-<a href="/text-tools.html" class="category-card">
-<div class="category-icon">📝</div>
-<div class="category-name">Text Tools</div>
-<div class="category-desc">Text manipulation, counting, formatting, and analysis tools.</div>
-<div class="category-count">1,749 Tools</div>
-<div class="top-tools">
-<h4>Popular Tools:</h4>
-<a href="/1-000-words-in-pages.html">1 000 Words In Pages</a>\n<a href="/1-00000-in-words.html">1 00000 In Words</a>\n<a href="/1-billion-in-rupees-in-words.html">1 Billion In Rupees In Words</a>\n<a href="/1-lakh-50-thousand-in-words.html">1 Lakh 50 Thousand In Words</a>\n<a href="/1-million-dollars-in-rupees-words.html">1 Million Dollars In Rupees Words</a>\n</div></a>\n
-<a href="/translators.html" class="category-card">
-<div class="category-icon">🌐</div>
-<div class="category-name">Translators</div>
-<div class="category-desc">Translate text between languages instantly.</div>
-<div class="category-count">243 Tools</div>
-<div class="top-tools">
-<h4>Popular Tools:</h4>
-<a href="/alien-language-translation.html">Alien Language Translation</a>\n<a href="/ancient-english-translation.html">Ancient English Translation</a>\n<a href="/automatic-google-translate.html">Automatic Google Translate</a>\n<a href="/bad-google-translate.html">Bad Google Translate</a>\n<a href="/bad-google-translation.html">Bad Google Translation</a>\n</div></a>\n
-<a href="/downloaders.html" class="category-card">
-<div class="category-icon">⬇️</div>
-<div class="category-name">Downloaders</div>
-<div class="category-desc">Download videos, images, and media from any platform.</div>
-<div class="category-count">561 Tools</div>
-<div class="top-tools">
-<h4>Popular Tools:</h4>
-<a href="/all-video-downloader.html">All Video Downloader</a>\n<a href="/android-download-instagram-videos.html">Android Download Instagram Videos</a>\n<a href="/android-instagram-video-downloader.html">Android Instagram Video Downloader</a>\n<a href="/baixar-video-tiktok.html">Baixar Video Tiktok</a>\n<a href="/bajar-instagram-videos.html">Bajar Instagram Videos</a>\n</div></a>\n
-<a href="/financial.html" class="category-card">
-<div class="category-icon">💰</div>
-<div class="category-name">Financial Tools</div>
-<div class="category-desc">Financial calculators, budgeting, and investment tools.</div>
-<div class="category-count">119 Tools</div>
-<div class="top-tools">
-<h4>Popular Tools:</h4>
-<a href="/5-1-arm-mortgage-rates.html">5 1 Arm Mortgage Rates</a>\n<a href="/alight-financial.html">Alight Financial</a>\n<a href="/bank-mortgage-calculator.html">Bank Mortgage Calculator</a>\n<a href="/bank-of-america-30-year-mortgage-rates.html">Bank Of America 30 Year Mortgage Rates</a>\n<a href="/bank-of-america-mortgage-rates.html">Bank Of America Mortgage Rates</a>\n</div></a>\n
-<a href="/other.html" class="category-card">
-<div class="category-icon">🔧</div>
-<div class="category-name">Other Tools</div>
-<div class="category-desc">Miscellaneous tools and utilities for everyday use.</div>
-<div class="category-count">7,601 Tools</div>
-<div class="top-tools">
-<h4>Popular Tools:</h4>
-<a href="/000080-color.html">000080 Color</a>\n<a href="/00205b.html">00205b</a>\n<a href="/00218-country-code.html">00218 Country Code</a>\n<a href="/00352-country-code.html">00352 Country Code</a>\n<a href="/00963-country-code.html">00963 Country Code</a>\n</div></a>\n
+<section class="hero">
+<div class="hero-content">
+<div class="badge">Private beta</div>
+<h1 class="hero-title">AI chat with<br>permanent memory</h1>
+<p class="hero-subtitle">Every conversation stored, indexed, and searchable. Use your own API keys from OpenAI, Anthropic, or Google.</p>
+<div id="waitlist" class="waitlist-form">
+<form id="waitlistForm" class="form-row">
+<input type="email" id="emailInput" class="input" placeholder="you@email.com" required>
+<button type="submit" class="btn btn-primary">Join waitlist</button>
+</form>
 </div>
 </div>
-<footer>
+</section>
+
+<section class="preview-section">
+<div class="preview-container">
+<div class="browser-chrome">
+<div class="browser-dot red"></div>
+<div class="browser-dot yellow"></div>
+<div class="browser-dot green"></div>
+</div>
+<div class="chat-preview">
+<div class="chat-sidebar">
+<div class="new-chat-btn"><span>+</span> New chat</div>
+<div class="chat-label">Recent</div>
+<div class="chat-item active">Database schema review</div>
+<div class="chat-item">API authentication</div>
+<div class="chat-item">React optimization</div>
+<div class="chat-label" style="margin-top:20px">3 months ago</div>
+<div class="chat-item">Redis caching decision</div>
+<div class="chat-item">Initial architecture</div>
+</div>
+<div class="chat-area">
+<div class="message">
+<div class="avatar user">Y</div>
+<div class="message-text">Why did we choose Redis for caching? I know we discussed this but I can't remember the reasoning.</div>
+</div>
+<div class="message">
+<div class="avatar ai">∞</div>
+<div class="message-content">
+<div class="message-text">From your conversation on <strong>October 15</strong>, you chose Redis over Memcached for three reasons:</div>
+<div class="code-block">
+<div><strong>1.</strong> Data structures for your leaderboard feature</div>
+<div><strong>2.</strong> Built-in persistence for cache warming</div>
+<div><strong>3.</strong> Pub/sub for real-time notifications</div>
+</div>
+<div class="memory-tag"><span>↩</span> Retrieved from conversation 94 days ago</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="problem-section">
+<div class="problem-content">
+<h2>AI assistants forget everything</h2>
+<p>You've had this conversation before. You explained your project, your preferences, your decisions. But the AI doesn't remember. So you explain it again. And again.</p>
+</div>
+</section>
+
+<section id="how-it-works" class="section">
+<div class="section-inner">
+<h2 class="section-title">How it works</h2>
+<div class="steps-grid">
+<div class="step">
+<div class="step-num">01</div>
+<h3 class="step-title">Every message stored</h3>
+<p class="step-desc">Raw messages saved with cryptographic hashes. Nothing is deleted or truncated.</p>
+</div>
+<div class="step">
+<div class="step-num">02</div>
+<h3 class="step-title">Semantic indexing</h3>
+<p class="step-desc">Vector embeddings enable search by meaning, not just keywords.</p>
+</div>
+<div class="step">
+<div class="step-num">03</div>
+<h3 class="step-title">Automatic summaries</h3>
+<p class="step-desc">Daily and weekly summaries compress context while preserving key details.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="features" class="section alt">
+<div class="section-inner">
+<h2 class="section-title">Features</h2>
+<div class="features-grid">
+<div class="feature-card">
+<h3>Your own API keys</h3>
+<p>Connect OpenAI, Anthropic, or Google. Pay providers directly at their rates.</p>
+</div>
+<div class="feature-card">
+<h3>Semantic search</h3>
+<p>Find past conversations by meaning. Ask "what did we decide about caching?" and get results.</p>
+</div>
+<div class="feature-card">
+<h3>Verified exports</h3>
+<p>Export conversations to PDF or Markdown with SHA-256 hashes for verification.</p>
+</div>
+<div class="feature-card">
+<h3>Private and encrypted</h3>
+<p>Your data is encrypted at rest. We never train on your conversations.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cta-section">
+<div class="cta-content">
+<h2>Stop repeating yourself</h2>
+<p>Join the waitlist for early access.</p>
+<div class="waitlist-form">
+<form id="waitlistForm2" class="form-row">
+<input type="email" class="input" placeholder="you@email.com" required>
+<button type="submit" class="btn btn-primary">Join waitlist</button>
+</form>
+</div>
+</div>
+</section>
+
+<footer class="footer">
 <div class="footer-inner">
-<p>&copy; 2026 TheToolsWebsite. All rights reserved.</p>
-<p style="margin-top:10px;color:rgba(255,255,255,0.7);">Professional calculators, converters, and tools for everyone.</p>
+<span class="footer-logo">Tools AI</span>
+<div class="footer-links">
+<a href="#">Privacy</a>
+<a href="#">Terms</a>
+</div>
 </div>
 </footer>
+
+<script>
+document.querySelectorAll('form').forEach(form => {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const input = form.querySelector('input[type="email"]');
+    const btn = form.querySelector('button');
+    if (!input.value || !input.value.includes('@')) return;
+    btn.textContent = 'Joining...';
+    btn.disabled = true;
+    await new Promise(r => setTimeout(r, 1200));
+    form.innerHTML = '<div class="success-message">✓ You\'re on the list</div>';
+  });
+});
+</script>
 </body>
 </html>
