@@ -12,16 +12,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>Tools AI - AI Chat with Permanent Memory</title>
-<meta name="description" content="AI chat that remembers everything. Every conversation stored, indexed, and searchable. Use your own API keys from OpenAI, Anthropic, or Google.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+<meta name="description" content="AI chat that remembers everything. Every conversation stored, indexed, and searchable forever. Use your own API keys from OpenAI, Anthropic, or Google.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%231a1a1a'/><text x='50' y='62' text-anchor='middle' font-size='40' fill='white'>∞</text></svg>">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{min-height:100vh;background:#fff;color:#1a1a1a;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;overflow-x:hidden}
 a,button{-webkit-tap-highlight-color:transparent}
+
+/* Navigation */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #f0f0f0}
 .nav-inner{max-width:1140px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:700;font-size:18px;letter-spacing:-0.5px}
+.logo{font-weight:700;font-size:18px;letter-spacing:-0.5px;color:#1a1a1a;text-decoration:none}
 .nav-links{display:flex;align-items:center;gap:32px}
 .nav-links a{color:#666;text-decoration:none;font-size:14px}
 .nav-links a:hover{color:#1a1a1a}
@@ -32,83 +34,144 @@ a,button{-webkit-tap-highlight-color:transparent}
 .mobile-menu-btn{display:none;background:none;border:none;padding:8px;cursor:pointer}
 .hamburger{display:flex;flex-direction:column;gap:5px;width:24px}
 .hamburger span{display:block;height:2px;background:#1a1a1a;border-radius:2px;transition:all 0.3s ease}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
 .mobile-menu{display:none;padding:16px 20px 20px;border-top:1px solid #f0f0f0;background:#fff}
 .mobile-menu.open{display:block}
 .mobile-menu a{display:block;padding:12px 0;color:#666;text-decoration:none;font-size:16px;border-bottom:1px solid #f0f0f0}
-.hero{padding:140px 20px 80px}
-.hero-content{max-width:720px;margin:0 auto;text-align:center}
-.badge{display:inline-block;padding:6px 14px;background:#f5f5f5;border-radius:100px;font-size:13px;color:#666;margin-bottom:24px;font-weight:500}
-.hero-title{font-size:48px;font-weight:600;line-height:1.1;letter-spacing:-1.5px;margin-bottom:20px;color:#1a1a1a}
-.hero-subtitle{font-size:18px;line-height:1.6;color:#666;margin-bottom:32px;max-width:540px;margin-left:auto;margin-right:auto}
-.waitlist-form{max-width:420px;margin:0 auto}
-.form-row{display:flex;gap:10px;background:#f8f8f8;padding:6px;border-radius:12px}
-.input{flex:1;min-width:0;padding:14px 16px;font-size:16px;background:#fff;border:1px solid #e8e8e8;border-radius:8px;outline:none;color:#1a1a1a;-webkit-appearance:none}
-.input::placeholder{color:#aaa}
+
+/* Buttons & Inputs */
+.input{padding:14px 16px;border:1px solid #e5e5e5;border-radius:8px;font-size:15px;width:280px;outline:none}
 .input:focus{border-color:#1a1a1a}
-.success-message{padding:18px 24px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;color:#166534;font-weight:500;text-align:center}
-.error-message{padding:18px 24px;background:#fef2f2;border:1px solid #fecaca;border-radius:12px;color:#dc2626;font-weight:500;text-align:center}
+
+/* Hero */
+.hero{padding:140px 20px 80px;text-align:center}
+.hero-content{max-width:700px;margin:0 auto}
+.badge{display:inline-block;padding:6px 14px;background:#f5f5f5;border-radius:20px;font-size:13px;font-weight:500;color:#666;margin-bottom:24px}
+.hero-title{font-size:52px;font-weight:700;line-height:1.1;letter-spacing:-2px;margin-bottom:20px}
+.hero-subtitle{font-size:18px;color:#666;line-height:1.6;margin-bottom:32px}
+.hero-subtitle strong{color:#1a1a1a}
+.waitlist-form{display:inline-block}
+.form-row{display:flex;gap:12px;justify-content:center}
+.form-note{margin-top:12px;font-size:13px;color:#888}
+.success-message{padding:16px 32px;background:#f0fdf4;border-radius:8px;color:#166534;font-weight:500}
+
+/* Preview */
 .preview-section{padding:0 20px 80px}
-.preview-container{max-width:960px;margin:0 auto;background:#fafafa;border-radius:16px;border:1px solid #eee;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.06)}
-.browser-chrome{display:flex;align-items:center;gap:8px;padding:14px 18px;background:#fff;border-bottom:1px solid #eee}
+.preview-container{max-width:1000px;margin:0 auto;border-radius:16px;overflow:hidden;box-shadow:0 25px 50px -12px rgba(0,0,0,0.15);border:1px solid #e5e5e5}
+.browser-chrome{background:#f5f5f5;padding:14px 16px;display:flex;gap:8px;border-bottom:1px solid #e5e5e5}
 .browser-dot{width:12px;height:12px;border-radius:50%}
-.red{background:#ff5f57}.yellow{background:#febc2e}.green{background:#28c840}
-.chat-preview{display:flex;min-height:380px}
-.chat-sidebar{width:200px;background:#fff;border-right:1px solid #eee;padding:16px;flex-shrink:0}
-.new-chat-btn{padding:10px 12px;background:#f5f5f5;border-radius:8px;font-size:13px;margin-bottom:20px;display:flex;align-items:center;gap:8px;color:#666}
-.chat-label{font-size:11px;color:#999;font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px}
-.chat-item{padding:10px 12px;font-size:13px;color:#888;border-radius:6px;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.chat-item.active{color:#1a1a1a;background:#f5f5f5}
-.chat-area{flex:1;padding:24px;display:flex;flex-direction:column;gap:24px;min-width:0}
+.browser-dot.red{background:#ff5f57}
+.browser-dot.yellow{background:#ffbd2e}
+.browser-dot.green{background:#28c840}
+.chat-preview{display:flex;min-height:400px;background:#fff}
+.chat-sidebar{width:240px;background:#fafafa;padding:16px;border-right:1px solid #f0f0f0}
+.new-chat-btn{display:flex;align-items:center;gap:8px;padding:12px;background:#fff;border:1px solid #e5e5e5;border-radius:8px;font-size:14px;font-weight:500;margin-bottom:20px}
+.chat-label{font-size:12px;color:#888;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px}
+.chat-item{padding:10px 12px;font-size:14px;color:#666;border-radius:6px;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chat-item.active{background:#fff;color:#1a1a1a}
+.chat-area{flex:1;padding:24px;display:flex;flex-direction:column;gap:24px}
 .message{display:flex;gap:12px}
-.avatar{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0}
-.avatar.user{background:#e5e5e5}
+.avatar{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;flex-shrink:0}
+.avatar.user{background:#e5e5e5;color:#666}
 .avatar.ai{background:#1a1a1a;color:#fff}
-.message-text{font-size:14px;line-height:1.6;color:#1a1a1a}
-.message-content{flex:1;min-width:0}
-.code-block{background:#f5f5f5;border-radius:8px;padding:14px 16px;font-size:14px;line-height:1.7;color:#444;margin-top:14px}
-.code-block div{margin-bottom:6px}
-.code-block div:last-child{margin-bottom:0}
-.memory-tag{margin-top:14px;padding:10px 14px;background:#f0f9ff;border-radius:6px;font-size:12px;color:#0369a1;display:flex;align-items:center;gap:6px}
-.problem-section{padding:80px 20px;background:#fafafa}
-.problem-content{max-width:640px;margin:0 auto;text-align:center}
-.problem-content h2{font-size:28px;font-weight:600;letter-spacing:-0.5px;margin-bottom:16px;color:#1a1a1a}
-.problem-content p{font-size:17px;line-height:1.7;color:#666}
-.section{padding:80px 20px}
-.section.alt{background:#fafafa}
+.message-content{flex:1}
+.message-text{font-size:15px;line-height:1.6;color:#1a1a1a}
+.code-block{margin-top:12px;padding:16px;background:#f5f5f5;border-radius:8px;font-size:14px;line-height:1.8}
+.memory-tag{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:8px 14px;background:#f0f9ff;border-radius:6px;font-size:13px;color:#0369a1}
+
+/* Comparison */
+.comparison-section{padding:80px 20px;background:#fafafa}
 .section-inner{max-width:900px;margin:0 auto}
-.section-title{font-size:28px;font-weight:600;letter-spacing:-0.5px;margin-bottom:48px;text-align:center;color:#1a1a1a}
-.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
-.step-num{font-size:42px;font-weight:600;color:#e5e5e5;margin-bottom:12px;letter-spacing:-2px}
-.step-title{font-size:17px;font-weight:600;margin-bottom:8px;color:#1a1a1a}
-.step-desc{font-size:15px;line-height:1.6;color:#666}
-.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.feature-card{padding:24px;background:#fff;border-radius:12px;border:1px solid #eee}
-.feature-card h3{font-size:16px;font-weight:600;margin-bottom:8px;color:#1a1a1a}
-.feature-card p{font-size:15px;line-height:1.6;color:#666;margin:0}
-.cta-section{padding:100px 20px;text-align:center}
-.cta-content{max-width:480px;margin:0 auto}
-.cta-content h2{font-size:28px;font-weight:600;letter-spacing:-0.5px;margin-bottom:16px;color:#1a1a1a}
-.cta-content p{font-size:17px;line-height:1.6;color:#666;margin-bottom:28px}
-.footer{padding:24px 20px;border-top:1px solid #eee}
+.section-title{font-size:32px;font-weight:700;text-align:center;margin-bottom:16px;letter-spacing:-1px}
+.section-subtitle{text-align:center;color:#666;font-size:18px;margin-bottom:48px}
+.comparison-table-wrapper{overflow-x:auto}
+.comparison-table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)}
+.comparison-table th,.comparison-table td{padding:16px 20px;text-align:left;border-bottom:1px solid #f0f0f0}
+.comparison-table th{background:#f5f5f5;font-weight:600;font-size:14px}
+.comparison-table th.highlight{background:#1a1a1a;color:#fff}
+.comparison-table td.label{font-weight:500;color:#1a1a1a}
+.comparison-table td.bad{color:#888}
+.comparison-table td.good{color:#166534;font-weight:500}
+
+/* Problem */
+.problem-section{padding:80px 20px;background:#1a1a1a;color:#fff}
+.problem-content{max-width:700px;margin:0 auto;text-align:center}
+.problem-content h2{font-size:32px;font-weight:700;margin-bottom:20px;letter-spacing:-1px}
+.problem-content p{font-size:18px;color:#a0a0a0;line-height:1.7}
+
+/* Audience */
+.audience-section{padding:80px 20px}
+.audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:32px}
+.audience-item{text-align:center;padding:32px 24px;background:#fafafa;border-radius:12px}
+.audience-icon{display:flex;justify-content:center;align-items:center;margin-bottom:16px;color:#1a1a1a}
+.audience-icon svg{width:40px;height:40px}
+.audience-item h3{font-size:18px;font-weight:600;margin-bottom:8px}
+.audience-item p{font-size:14px;color:#666;line-height:1.5}
+.audience-summary{text-align:center;font-size:16px;color:#888;font-style:italic}
+
+/* How it works */
+.how-section{padding:80px 20px;background:#fafafa}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:48px}
+.step{text-align:center}
+.step-num{font-size:48px;font-weight:700;color:#e5e5e5;margin-bottom:16px}
+.step-title{font-size:18px;font-weight:600;margin-bottom:12px}
+.step-desc{font-size:15px;color:#666;line-height:1.6}
+
+/* Features */
+.features-section{padding:80px 20px}
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px}
+.feature-card{padding:32px;background:#fafafa;border-radius:12px}
+.feature-card h3{font-size:18px;font-weight:600;margin-bottom:12px}
+.feature-card p{font-size:15px;color:#666;line-height:1.6}
+
+/* Pricing */
+.pricing-section{padding:80px 20px;background:#fafafa}
+.pricing-card{max-width:400px;margin:48px auto 0;padding:40px;background:#fff;border-radius:16px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1);text-align:center}
+.pricing-header{margin-bottom:16px}
+.pricing-amount{font-size:48px;font-weight:700;letter-spacing:-2px}
+.pricing-period{font-size:18px;color:#666}
+.pricing-desc{color:#666;margin-bottom:24px}
+.pricing-features{list-style:none;text-align:left;margin-bottom:32px}
+.pricing-features li{padding:10px 0;border-bottom:1px solid #f0f0f0;font-size:15px}
+.pricing-features li::before{content:"→";margin-right:10px;color:#1a1a1a}
+.pricing-note{margin-top:12px;font-size:13px;color:#888}
+
+/* CTA */
+.cta-section{padding:80px 20px;text-align:center}
+.cta-content{max-width:600px;margin:0 auto}
+.cta-content h2{font-size:32px;font-weight:700;margin-bottom:12px;letter-spacing:-1px}
+.cta-content p{color:#666;font-size:18px;margin-bottom:32px}
+
+/* Footer */
+.footer{padding:24px 20px;border-top:1px solid #f0f0f0}
 .footer-inner{max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
 .footer-logo{font-size:14px;color:#888;font-weight:500}
 .footer-links{display:flex;gap:24px}
 .footer-links a{font-size:14px;color:#888;text-decoration:none}
 .footer-links a:hover{color:#1a1a1a}
+
+/* Tablet */
 @media(max-width:768px){
 .nav-links{display:none}
 .mobile-menu-btn{display:block}
 .hero{padding:120px 20px 60px}
 .hero-title{font-size:36px;letter-spacing:-1px}
 .hero-subtitle{font-size:16px}
+.preview-section{padding:0 20px 60px}
 .chat-sidebar{display:none}
 .chat-preview{min-height:300px}
 .chat-area{padding:20px}
+.audience-grid{grid-template-columns:repeat(2,1fr)}
 .steps-grid{grid-template-columns:1fr;gap:32px}
 .features-grid{grid-template-columns:1fr}
 .problem-content h2,.section-title,.cta-content h2{font-size:24px}
 .problem-content p,.cta-content p{font-size:16px}
+.comparison-table th,.comparison-table td{padding:12px 14px;font-size:13px}
 }
+
+/* Mobile */
 @media(max-width:480px){
 .nav-inner{padding:14px 16px}
 .hero{padding:110px 16px 50px}
@@ -126,7 +189,8 @@ a,button{-webkit-tap-highlight-color:transparent}
 .message-text{font-size:13px}
 .code-block{padding:12px;font-size:13px}
 .memory-tag{font-size:11px;padding:8px 12px}
-.problem-section,.section{padding:60px 16px}
+.audience-grid{grid-template-columns:1fr}
+.problem-section,.how-section,.features-section,.pricing-section,.comparison-section,.audience-section{padding:60px 16px}
 .section-title{margin-bottom:36px}
 .step-num{font-size:36px}
 .step-title{font-size:16px}
@@ -134,226 +198,390 @@ a,button{-webkit-tap-highlight-color:transparent}
 .feature-card{padding:20px}
 .feature-card h3{font-size:15px}
 .feature-card p{font-size:14px}
+.pricing-card{padding:28px 20px}
+.pricing-amount{font-size:40px}
 .cta-section{padding:70px 16px}
 .footer{padding:20px 16px}
 .footer-inner{flex-direction:column;gap:16px;text-align:center}
 .footer-links{gap:20px}
 }
+
 @media(max-width:375px){
 .hero-title{font-size:28px}
 .hero-subtitle{font-size:14px}
 .problem-content h2,.section-title,.cta-content h2{font-size:22px}
 }
+
 @supports(padding-top:env(safe-area-inset-top)){
 .nav{padding-top:env(safe-area-inset-top)}
 .footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
 }
+
+@supports(-webkit-touch-callout:none){
+html{scroll-behavior:auto}
+}
 </style>
 </head>
 <body>
+
+<!-- Navigation -->
 <nav class="nav">
-<div class="nav-inner">
-<span class="logo">Tools AI</span>
-<div class="nav-links">
-<a href="#how-it-works">How it works</a>
-<a href="#features">Features</a>
-<button class="btn btn-primary btn-sm" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join waitlist</button>
-</div>
-<button class="mobile-menu-btn" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Toggle menu">
-<span class="hamburger"><span></span><span></span><span></span></span>
-</button>
-</div>
-<div id="mobileMenu" class="mobile-menu">
-<a href="#how-it-works">How it works</a>
-<a href="#features">Features</a>
-<button class="btn btn-primary" style="width:100%;margin-top:8px" onclick="document.getElementById('mobileMenu').classList.remove('open');document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join waitlist</button>
-</div>
+  <div class="nav-inner">
+    <a href="/" class="logo">Tools AI</a>
+    <div class="nav-links">
+      <a href="#comparison">Why Tools AI</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <button class="btn btn-primary btn-sm" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join waitlist</button>
+    </div>
+    <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#comparison" onclick="toggleMenu()">Why Tools AI</a>
+    <a href="#how-it-works" onclick="toggleMenu()">How it works</a>
+    <a href="#pricing" onclick="toggleMenu()">Pricing</a>
+    <button class="btn btn-primary" style="width:100%;margin-top:8px" onclick="toggleMenu();document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join waitlist</button>
+  </div>
 </nav>
 
+<!-- Hero -->
 <section class="hero">
-<div class="hero-content">
-<div class="badge">Private beta</div>
-<h1 class="hero-title">AI chat with<br>permanent memory</h1>
-<p class="hero-subtitle">Every conversation stored, indexed, and searchable. Use your own API keys from OpenAI, Anthropic, or Google.</p>
-<div id="waitlist" class="waitlist-form">
-<form id="waitlistForm1" class="form-row">
-<input type="email" class="input" placeholder="you@email.com" required>
-<button type="submit" class="btn btn-primary">Join waitlist</button>
-</form>
-</div>
-</div>
+  <div class="hero-content">
+    <div class="badge">Private beta</div>
+    <h1 class="hero-title">AI conversations that<br>never forget</h1>
+    <p class="hero-subtitle">
+      ChatGPT silently summarizes and loses context over time.<br>
+      <strong>Your conversations here are stored verbatim, permanently, and searchable forever.</strong>
+    </p>
+    <div id="waitlist" class="waitlist-form">
+      <form id="waitlist-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <input type="email" id="email-input" class="input" placeholder="you@email.com" required>
+          <button type="submit" class="btn btn-primary" id="submit-btn">Join waitlist</button>
+        </div>
+        <p class="form-note">No credit card required · Free to start</p>
+      </form>
+      <div id="success-message" class="success-message" style="display:none">You're on the list</div>
+    </div>
+  </div>
 </section>
 
+<!-- Product Preview -->
 <section class="preview-section">
-<div class="preview-container">
-<div class="browser-chrome">
-<div class="browser-dot red"></div>
-<div class="browser-dot yellow"></div>
-<div class="browser-dot green"></div>
-</div>
-<div class="chat-preview">
-<div class="chat-sidebar">
-<div class="new-chat-btn"><span>+</span> New chat</div>
-<div class="chat-label">Recent</div>
-<div class="chat-item active">Database schema review</div>
-<div class="chat-item">API authentication</div>
-<div class="chat-item">React optimization</div>
-<div class="chat-label" style="margin-top:20px">3 months ago</div>
-<div class="chat-item">Redis caching decision</div>
-<div class="chat-item">Initial architecture</div>
-</div>
-<div class="chat-area">
-<div class="message">
-<div class="avatar user">Y</div>
-<div class="message-text">Why did we choose Redis for caching? I know we discussed this but I can't remember the reasoning.</div>
-</div>
-<div class="message">
-<div class="avatar ai">∞</div>
-<div class="message-content">
-<div class="message-text">From your conversation on <strong>October 15</strong>, you chose Redis over Memcached for three reasons:</div>
-<div class="code-block">
-<div><strong>1.</strong> Data structures for your leaderboard feature</div>
-<div><strong>2.</strong> Built-in persistence for cache warming</div>
-<div><strong>3.</strong> Pub/sub for real-time notifications</div>
-</div>
-<div class="memory-tag"><span>↩</span> Retrieved from conversation 94 days ago</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <div class="preview-container">
+    <div class="browser-chrome">
+      <div class="browser-dot red"></div>
+      <div class="browser-dot yellow"></div>
+      <div class="browser-dot green"></div>
+    </div>
+    <div class="chat-preview">
+      <div class="chat-sidebar">
+        <div class="new-chat-btn"><span>+</span> New chat</div>
+        <div class="chat-label">Recent</div>
+        <div class="chat-item active">Database schema review</div>
+        <div class="chat-item">API authentication</div>
+        <div class="chat-item">React optimization</div>
+        <div class="chat-label" style="margin-top:20px">3 months ago</div>
+        <div class="chat-item">Redis caching decision</div>
+        <div class="chat-item">Initial architecture</div>
+      </div>
+      <div class="chat-area">
+        <div class="message">
+          <div class="avatar user">Y</div>
+          <div class="message-text">Why did we choose Redis for caching? I know we discussed this but I can't remember the reasoning.</div>
+        </div>
+        <div class="message">
+          <div class="avatar ai">∞</div>
+          <div class="message-content">
+            <div class="message-text">From your conversation on <strong>October 15</strong>, you chose Redis over Memcached for three reasons:</div>
+            <div class="code-block">
+              <div><strong>1.</strong> Data structures for your leaderboard feature</div>
+              <div><strong>2.</strong> Built-in persistence for cache warming</div>
+              <div><strong>3.</strong> Pub/sub for real-time notifications</div>
+            </div>
+            <div class="memory-tag"><span>←</span> Retrieved from conversation 94 days ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- Comparison -->
+<section id="comparison" class="comparison-section">
+  <div class="section-inner">
+    <h2 class="section-title">Why not just use ChatGPT?</h2>
+    <p class="section-subtitle">ChatGPT wasn't built for long-running projects. We were.</p>
+    <div class="comparison-table-wrapper">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>ChatGPT</th>
+            <th class="highlight">Tools AI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="label">Long conversations</td>
+            <td class="bad">Summarized & compressed</td>
+            <td class="good">Stored verbatim</td>
+          </tr>
+          <tr>
+            <td class="label">Memory guarantees</td>
+            <td class="bad">None</td>
+            <td class="good">Explicit & permanent</td>
+          </tr>
+          <tr>
+            <td class="label">Message integrity</td>
+            <td class="bad">Mutable</td>
+            <td class="good">SHA-256 hashed</td>
+          </tr>
+          <tr>
+            <td class="label">Auditability</td>
+            <td class="bad">No</td>
+            <td class="good">Yes, with exports</td>
+          </tr>
+          <tr>
+            <td class="label">Year-long projects</td>
+            <td class="bad">Unreliable</td>
+            <td class="good">Designed for it</td>
+          </tr>
+          <tr>
+            <td class="label">Your own API keys</td>
+            <td class="bad">No</td>
+            <td class="good">Yes, pay providers directly</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Problem -->
 <section class="problem-section">
-<div class="problem-content">
-<h2>AI assistants forget everything</h2>
-<p>You've had this conversation before. You explained your project, your preferences, your decisions. But the AI doesn't remember. So you explain it again. And again.</p>
-</div>
+  <div class="problem-content">
+    <h2>AI assistants forget everything</h2>
+    <p>You've had this conversation before. You explained your project, your preferences, your decisions. But the AI doesn't remember. So you explain it again. And again.</p>
+  </div>
 </section>
 
-<section id="how-it-works" class="section">
-<div class="section-inner">
-<h2 class="section-title">How it works</h2>
-<div class="steps-grid">
-<div class="step">
-<div class="step-num">01</div>
-<h3 class="step-title">Every message stored</h3>
-<p class="step-desc">Raw messages saved with cryptographic hashes. Nothing is deleted or truncated.</p>
-</div>
-<div class="step">
-<div class="step-num">02</div>
-<h3 class="step-title">Semantic indexing</h3>
-<p class="step-desc">Vector embeddings enable search by meaning, not just keywords.</p>
-</div>
-<div class="step">
-<div class="step-num">03</div>
-<h3 class="step-title">Automatic summaries</h3>
-<p class="step-desc">Daily and weekly summaries compress context while preserving key details.</p>
-</div>
-</div>
-</div>
+<!-- Who it's for -->
+<section class="audience-section">
+  <div class="section-inner">
+    <h2 class="section-title">Who this is for</h2>
+    <div class="audience-grid">
+      <div class="audience-item">
+        <span class="audience-icon">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="12 8 4 20 12 32"/>
+            <polyline points="28 8 36 20 28 32"/>
+            <line x1="22" y1="6" x2="18" y2="34"/>
+          </svg>
+        </span>
+        <h3>Developers</h3>
+        <p>Working on long-running codebases where context matters</p>
+      </div>
+      <div class="audience-item">
+        <span class="audience-icon">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 4 L20 14"/>
+            <path d="M20 14 L28 22 L28 36 L12 36 L12 22 L20 14"/>
+            <circle cx="20" cy="8" r="4"/>
+            <path d="M16 26 L24 26"/>
+            <path d="M16 30 L24 30"/>
+          </svg>
+        </span>
+        <h3>Founders</h3>
+        <p>Documenting strategy & decisions over months of iteration</p>
+      </div>
+      <div class="audience-item">
+        <span class="audience-icon">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="16" cy="16" r="10"/>
+            <line x1="23" y1="23" x2="36" y2="36"/>
+            <path d="M12 14 L16 18 L20 12"/>
+          </svg>
+        </span>
+        <h3>Researchers</h3>
+        <p>Tracking evolving hypotheses and literature reviews</p>
+      </div>
+      <div class="audience-item">
+        <span class="audience-icon">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="20" cy="14" r="8"/>
+            <path d="M8 36 C8 26 14 22 20 22 C26 22 32 26 32 36"/>
+            <path d="M16 12 Q20 18 24 12"/>
+            <circle cx="16" cy="10" r="1.5" fill="currentColor"/>
+            <circle cx="24" cy="10" r="1.5" fill="currentColor"/>
+          </svg>
+        </span>
+        <h3>Therapy & Journaling</h3>
+        <p>Long-term mental health tracking, personal growth, and reflective journaling</p>
+      </div>
+      <div class="audience-item">
+        <span class="audience-icon">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M28 4 L36 12 L14 34 L4 36 L6 26 L28 4"/>
+            <path d="M24 8 L32 16"/>
+            <path d="M6 26 L14 34"/>
+          </svg>
+        </span>
+        <h3>Writers</h3>
+        <p>Working on large, persistent documents and creative projects</p>
+      </div>
+      <div class="audience-item">
+        <span class="audience-icon">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 16 L20 8 L36 16 L20 24 L4 16"/>
+            <path d="M10 19 L10 30 Q20 36 30 30 L30 19"/>
+            <line x1="36" y1="16" x2="36" y2="28"/>
+            <circle cx="36" cy="30" r="2"/>
+          </svg>
+        </span>
+        <h3>Students</h3>
+        <p>Studying complex subjects over semesters with connected context</p>
+      </div>
+    </div>
+    <p class="audience-summary">Anyone tired of AI "forgetting" critical context mid-project.</p>
+  </div>
 </section>
 
-<section id="features" class="section alt">
-<div class="section-inner">
-<h2 class="section-title">Features</h2>
-<div class="features-grid">
-<div class="feature-card">
-<h3>Your own API keys</h3>
-<p>Connect OpenAI, Anthropic, or Google. Pay providers directly at their rates.</p>
-</div>
-<div class="feature-card">
-<h3>Semantic search</h3>
-<p>Find past conversations by meaning. Ask "what did we decide about caching?" and get results.</p>
-</div>
-<div class="feature-card">
-<h3>Verified exports</h3>
-<p>Export conversations to PDF or Markdown with SHA-256 hashes for verification.</p>
-</div>
-<div class="feature-card">
-<h3>Private and encrypted</h3>
-<p>Your data is encrypted at rest. We never train on your conversations.</p>
-</div>
-</div>
-</div>
+<!-- How it works -->
+<section id="how-it-works" class="how-section">
+  <div class="section-inner">
+    <h2 class="section-title">How it works</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3 class="step-title">Every message stored</h3>
+        <p class="step-desc">Raw messages saved with cryptographic hashes. Nothing is deleted or truncated.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3 class="step-title">Semantic indexing</h3>
+        <p class="step-desc">Vector embeddings enable search by meaning, not just keywords.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3 class="step-title">Automatic summaries</h3>
+        <p class="step-desc">Daily and weekly summaries compress context while preserving key details.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- Features -->
+<section id="features" class="features-section">
+  <div class="section-inner">
+    <h2 class="section-title">Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Your own API keys</h3>
+        <p>Connect OpenAI, Anthropic, or Google. Pay providers directly at their rates.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Semantic search</h3>
+        <p>Find past conversations by meaning. Ask "what did we decide about caching?" and get results.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Verified exports</h3>
+        <p>Export conversations to PDF or Markdown with SHA-256 hashes for verification.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Private and encrypted</h3>
+        <p>Your data is encrypted at rest. We never train on your conversations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing" class="pricing-section">
+  <div class="section-inner">
+    <h2 class="section-title">Simple pricing</h2>
+    <div class="pricing-card">
+      <div class="pricing-header">
+        <span class="pricing-amount">$20</span>
+        <span class="pricing-period">/ month</span>
+      </div>
+      <p class="pricing-desc">Unlimited conversations. Permanent memory. Your API keys.</p>
+      <ul class="pricing-features">
+        <li>Unlimited conversations</li>
+        <li>Permanent message storage</li>
+        <li>Semantic search across all chats</li>
+        <li>Export anytime (PDF, Markdown, JSON)</li>
+        <li>Use your own API keys</li>
+      </ul>
+      <button class="btn btn-primary" style="width:100%" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join waitlist</button>
+      <p class="pricing-note">Cancel anytime. No lock-in.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
 <section class="cta-section">
-<div class="cta-content">
-<h2>Stop repeating yourself</h2>
-<p>Join the waitlist for early access.</p>
-<div class="waitlist-form">
-<form id="waitlistForm2" class="form-row">
-<input type="email" class="input" placeholder="you@email.com" required>
-<button type="submit" class="btn btn-primary">Join waitlist</button>
-</form>
-</div>
-</div>
+  <div class="cta-content">
+    <h2>Stop repeating yourself</h2>
+    <p>Join the waitlist for early access.</p>
+    <div class="waitlist-form">
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <input type="email" class="input" placeholder="you@email.com" required id="email-input-2">
+          <button type="submit" class="btn btn-primary">Join waitlist</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </section>
 
+<!-- Footer -->
 <footer class="footer">
-<div class="footer-inner">
-<span class="footer-logo">Tools AI</span>
-<div class="footer-links">
-<a href="#">Privacy</a>
-<a href="#">Terms</a>
-</div>
-</div>
+  <div class="footer-inner">
+    <span class="footer-logo">Tools AI</span>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
 </footer>
 
 <script>
-const SUPABASE_URL = 'https://synpjcammfjebwsmtfpz.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5bnBqY2FtbWZqZWJ3c210ZnB6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk0OTU3NDcsImV4cCI6MjA4NTA3MTc0N30.iHXwtPV10JGPL5OKgkpd6WxerTQoI4YE4-ld9g38eRQ';
-
-async function submitToWaitlist(email) {
-  const response = await fetch(`${SUPABASE_URL}/rest/v1/waitlist`, {
-    method: 'POST',
-    headers: {
-      'apikey': SUPABASE_KEY,
-      'Authorization': `Bearer ${SUPABASE_KEY}`,
-      'Content-Type': 'application/json',
-      'Prefer': 'return=minimal'
-    },
-    body: JSON.stringify({
-      email: email,
-      status: 'pending'
-    })
-  });
-  
-  if (!response.ok) {
-    const error = await response.json();
-    if (error.code === '23505') {
-      throw new Error('already_exists');
-    }
-    throw new Error('failed');
-  }
-  return true;
+function toggleMenu(){
+  document.getElementById('mobile-menu').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
 }
 
-document.querySelectorAll('form').forEach(form => {
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const input = form.querySelector('input[type="email"]');
-    const btn = form.querySelector('button');
-    const email = input.value.trim();
-    
-    if (!email || !email.includes('@')) return;
-    
-    btn.textContent = 'Joining...';
-    btn.disabled = true;
-    
-    try {
-      await submitToWaitlist(email);
-      form.innerHTML = '<div class="success-message">✓ You\'re on the list!</div>';
-    } catch (err) {
-      if (err.message === 'already_exists') {
-        form.innerHTML = '<div class="success-message">✓ You\'re already on the list!</div>';
-      } else {
-        form.innerHTML = '<div class="error-message">Something went wrong. Try again.</div>';
-      }
-    }
-  });
-});
+async function handleSubmit(e){
+  e.preventDefault();
+  const email = e.target.querySelector('input[type="email"]').value;
+  if(!email || !email.includes('@')) return;
+  
+  const btn = e.target.querySelector('button');
+  btn.textContent = 'Joining...';
+  btn.disabled = true;
+  
+  // Replace with your Supabase endpoint
+  // await fetch('YOUR_SUPABASE_URL/rest/v1/waitlist', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //     'apikey': 'YOUR_SUPABASE_ANON_KEY'
+  //   },
+  //   body: JSON.stringify({ email })
+  // });
+  
+  await new Promise(r => setTimeout(r, 1200));
+  
+  document.getElementById('waitlist-form').style.display = 'none';
+  document.getElementById('success-message').style.display = 'block';
+}
 </script>
 </body>
 </html>
