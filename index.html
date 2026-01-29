@@ -567,20 +567,28 @@ async function handleSubmit(e){
   btn.textContent = 'Joining...';
   btn.disabled = true;
   
-  // Replace with your Supabase endpoint
-  // await fetch('YOUR_SUPABASE_URL/rest/v1/waitlist', {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //     'apikey': 'YOUR_SUPABASE_ANON_KEY'
-  //   },
-  //   body: JSON.stringify({ email })
-  // });
-  
-  await new Promise(r => setTimeout(r, 1200));
-  
-  document.getElementById('waitlist-form').style.display = 'none';
-  document.getElementById('success-message').style.display = 'block';
+  try {
+    const res = await fetch('https://synpjcammfjebwsmtfpz.supabase.co/rest/v1/waitlist', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5bnBqY2FtbWZqZWJ3c210ZnB6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk0OTU3NDcsImV4cCI6MjA4NTA3MTc0N30.iHXwtPV10JGPL5OKgkpd6WxerTQoI4YE4-ld9g38eRQ',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5bnBqY2FtbWZqZWJ3c210ZnB6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk0OTU3NDcsImV4cCI6MjA4NTA3MTc0N30.iHXwtPV10JGPL5OKgkpd6WxerTQoI4YE4-ld9g38eRQ',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ email })
+    });
+    
+    if(res.ok || res.status === 409) {
+      document.getElementById('waitlist-form').style.display = 'none';
+      document.getElementById('success-message').style.display = 'block';
+    } else {
+      throw new Error('Failed');
+    }
+  } catch(err) {
+    btn.textContent = 'Try again';
+    btn.disabled = false;
+  }
 }
 </script>
 </body>
